@@ -5,13 +5,24 @@ class KitchenCategory(models.Model):
     name = models.CharField(max_length=255)
     is_active = models.BooleanField(default=True)
 
+    def __str__(self) -> str:
+        return self.name
 
-class Category(models.Model):
+
+class MaterialCategory(models.Model):
     name = models.CharField(max_length=255)
+    is_active = models.BooleanField(default=True)
+
+    def __str__(self) -> str:
+        return self.name
 
 
-class Vendor(models.Model):
+class MaterialVendor(models.Model):
     name = models.CharField(max_length=255)
+    is_active = models.BooleanField(default=True)
+
+    def __str__(self) -> str:
+        return self.name
 
 
 class Material(models.Model):
@@ -25,14 +36,30 @@ class Material(models.Model):
     meta_description = models.TextField(blank=True, null=True)
     color = models.TextField(blank=True, null=True)
     finish = models.TextField(blank=True, null=True)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, blank=True, null=True)
-    vendor = models.ForeignKey(Vendor, on_delete=models.CASCADE, blank=True, null=True)
+    category = models.ForeignKey(MaterialCategory, on_delete=models.CASCADE, blank=True, null=True)
+    vendor = models.ForeignKey(MaterialVendor, on_delete=models.CASCADE, blank=True, null=True)
+    is_active = models.BooleanField(default=True)
+
+    class Meta:
+        ordering = ("ranking",)
 
     def __str__(self) -> str:
-        return f"{self.name} - {self.images}"
+        return self.name
 
 
-class Feature(models.Model):
+class MaterialImage(models.Model):
+    ranking = models.PositiveBigIntegerField(default=0)
+    material = models.ForeignKey(Material, on_delete=models.CASCADE)
+    image = models.FileField(upload_to="")
+
+    class Meta:
+        ordering = ("ranking",)
+
+    def __str__(self) -> str:
+        return "%s - %s" % (self.item.name, self.id)
+
+
+class MaterialFeature(models.Model):
     material = models.OneToOneField(Material, on_delete=models.CASCADE)
     chip = models.TextField(blank=True, null=True)
     heat = models.TextField(blank=True, null=True)
@@ -41,8 +68,11 @@ class Feature(models.Model):
     water = models.TextField(blank=True, null=True)
     frost = models.TextField(blank=True, null=True)
 
+    def __str__(self):
+        return "%s" % (self.material.name)
 
-class Application(models.Model):
+
+class MaterialApplication(models.Model):
     material = models.OneToOneField(Material, on_delete=models.CASCADE)
     countertops = models.TextField(blank=True, null=True)
     floorings = models.TextField(blank=True, null=True)
@@ -51,8 +81,11 @@ class Application(models.Model):
     fireplace = models.TextField(blank=True, null=True)
     outdoor = models.TextField(blank=True, null=True)
 
+    def __str__(self):
+        return "%s" % (self.material.name)
 
-class TechnicalSpecification(models.Model):
+
+class MaterialTechnicalSpecification(models.Model):
     material = models.OneToOneField(Material, on_delete=models.CASCADE)
     petrographic_denomination = models.TextField(blank=True, null=True)
     hardness = models.TextField(blank=True, null=True)
@@ -61,7 +94,10 @@ class TechnicalSpecification(models.Model):
     open_porosity = models.TextField(blank=True, null=True)
     abrasion_strength = models.TextField(blank=True, null=True)
     compressive_strength = models.TextField(blank=True, null=True)
-    attachement = models.TextField(blank=True, null=True)
+    attachement = models.FileField(upload_to="")
+
+    def __str__(self):
+        return "%s" % (self.material.name)
 
 
 class KitchenItem(models.Model):
@@ -76,7 +112,22 @@ class KitchenItem(models.Model):
     tall_unit = models.TextField(blank=True, null=True)
     design_solution = models.TextField(blank=True, null=True)
     other = models.TextField(blank=True, null=True)
-    images = models.TextField(blank=True, null=True)
+    is_active = models.BooleanField(default=True)
+
+    class Meta:
+        ordering = ("ranking",)
 
     def __str__(self):
-        return f"{self.name} - {self.category.name}"
+        return "%s - %s" % (self.name, self.category.name)
+
+
+class KitchenItemImage(models.Model):
+    ranking = models.PositiveBigIntegerField(default=0)
+    item = models.ForeignKey(KitchenItem, on_delete=models.CASCADE)
+    image = models.FileField(upload_to="")
+
+    class Meta:
+        ordering = ("ranking",)
+
+    def __str__(self) -> str:
+        return "%s - %s" % (self.item.name, self.id)

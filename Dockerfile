@@ -9,7 +9,7 @@ WORKDIR $APP_HOME
 
 COPY ./requirements.txt $APP_HOME/requirements.txt
 
-RUN pip install -r requirements.txt --no-cache-dir
+RUN pip install --upgrade pip && pip install -r requirements.txt --no-cache-dir
 
 COPY . $APP_HOME
 

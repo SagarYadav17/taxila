@@ -9,7 +9,6 @@ from config._env import (
     AWS_IAM_SECRET_ACCESS_KEY,
     AWS_S3_BUCKET_NAME,
     DB_PASSWORD,
-    DB_ENGINE,
     DB_HOSTNAME,
     DB_NAME,
     DB_PORT,
@@ -43,11 +42,13 @@ INSTALLED_APPS = [
     # Plugins
     "storages",
     "rest_framework",
+    "django_prometheus",
     # App
     "taxila",
 ]
 
 MIDDLEWARE = [
+    "django_prometheus.middleware.PrometheusBeforeMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -55,6 +56,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "django_prometheus.middleware.PrometheusAfterMiddleware",
 ]
 
 ROOT_URLCONF = "config.urls"
@@ -83,7 +85,7 @@ WSGI_APPLICATION = "config.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": DB_ENGINE,
+        "ENGINE": "django_prometheus.db.backends.postgresql",
         "NAME": DB_NAME,
         "USER": DB_USERNAME,
         "PASSWORD": DB_PASSWORD,
@@ -95,7 +97,7 @@ DATABASES = {
 
 CACHES = {
     "default": {
-        "BACKEND": "django.core.cache.backends.redis.RedisCache",
+        "BACKEND": "django_prometheus.cache.backends.redis.RedisCache",
         "LOCATION": f"redis://{REDIS_USERNAME}:{REDIS_PASSWORD}@{REDIS_URL}",
     }
 }

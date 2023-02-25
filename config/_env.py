@@ -7,7 +7,6 @@ DEBUG_MODE = os.environ.get("DEBUG_MODE", False)
 DJANGO_SECRET_KEY = os.environ.get("SECRET_KEY", "secret-key")
 
 # Postgres
-DB_ENGINE = os.environ.get("DB_ENGINE", "django.db.backends.mysql")
 DB_NAME = os.environ.get("DB_NAME", "taxila")
 DB_USERNAME = os.environ.get("DB_USERNAME", "root")
 DB_PASSWORD = os.environ.get("DB_PASSWORD", "password")

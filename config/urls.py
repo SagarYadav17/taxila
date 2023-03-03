@@ -10,6 +10,9 @@ from taxila.views import (
     MaterialVendorListView,
 )
 
+admin.site.site_header = "Taxila Stone Administration"
+admin.site.index_title = "Taxila Stone"
+admin.site.site_title = "Administration"
 
 urlpatterns = [
     path("admin/", admin.site.urls),

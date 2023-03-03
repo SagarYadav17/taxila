@@ -2,9 +2,6 @@ from pathlib import Path
 from config._env import (
     DEBUG_MODE,
     DJANGO_SECRET_KEY,
-    REDIS_URL,
-    REDIS_USERNAME,
-    REDIS_PASSWORD,
     AWS_IAM_ACCESS_KEY_ID,
     AWS_IAM_SECRET_ACCESS_KEY,
     AWS_S3_BUCKET_NAME,
@@ -94,13 +91,6 @@ DATABASES = {
     }
 }
 
-
-CACHES = {
-    "default": {
-        "BACKEND": "django_prometheus.cache.backends.redis.RedisCache",
-        "LOCATION": f"redis://{REDIS_USERNAME}:{REDIS_PASSWORD}@{REDIS_URL}",
-    }
-}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators

@@ -13,11 +13,6 @@ DB_PASSWORD = os.environ.get("DB_PASSWORD", "password")
 DB_HOSTNAME = os.environ.get("DB_HOSTNAME", "127.0.0.1")
 DB_PORT = os.environ.get("DB_PORT", "3306")
 
-# Redis
-REDIS_URL = os.environ.get("REDIS_URL", "127.0.0.1")
-REDIS_USERNAME = os.environ.get("REDIS_USERNAME", "default")
-REDIS_PASSWORD = os.environ.get("REDIS_PASSWORD", "password")
-
 # AWS
 AWS_IAM_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID", "")
 AWS_IAM_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY", "")

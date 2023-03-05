@@ -1,21 +1,12 @@
 from django.db import models
 from django.core.cache import cache
+
 from config.utils import get_uuid_filename
 
 
-def material_upload_to(instance, filename):
+def upload_to_path(instance, filename):
     new_filename = get_uuid_filename(filename=filename)
-    return f"Material/{new_filename}"
-
-
-def material_technical_specification_upload_to(instance, filename):
-    new_filename = get_uuid_filename(filename=filename)
-    return f"MaterialTechnicalSpecification/{new_filename}"
-
-
-def kitchen_item_upload_to(instance, filename):
-    new_filename = get_uuid_filename(filename=filename)
-    return f"KitchenItemImage/{new_filename}"
+    return f"{instance._meta.app_label}/{instance._meta.model_name}/{new_filename}"
 
 
 class TimestampedModel(models.Model):
@@ -36,7 +27,30 @@ class TimestampedModel(models.Model):
         return super().save(*args, **kwargs)
 
 
+class ParentCategory(TimestampedModel):
+    name = models.CharField(max_length=255)
+    is_active = models.BooleanField(default=True)
+
+    def __str__(self) -> str:
+        return self.name
+
+
+class MetaData(TimestampedModel):
+    slug = models.SlugField(max_length=255, unique=True)
+    title = models.CharField(max_length=255)
+    og_title = models.CharField(max_length=255, blank=True, null=True)
+    twitter_title = models.CharField(max_length=255, blank=True, null=True)
+    meta_description = models.TextField(blank=True, null=True)
+    og_description = models.TextField(blank=True, null=True)
+    twitter_description = models.TextField(blank=True, null=True)
+    script = models.JSONField(default=dict)
+
+    def __str__(self) -> str:
+        return self.slug
+
+
 class KitchenCategory(TimestampedModel):
+    parent_category = models.ForeignKey(ParentCategory, on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
     is_active = models.BooleanField(default=True)
 
@@ -45,6 +59,7 @@ class KitchenCategory(TimestampedModel):
 
 
 class MaterialCategory(TimestampedModel):
+    parent_category = models.ForeignKey(ParentCategory, on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
     is_active = models.BooleanField(default=True)
 
@@ -63,7 +78,6 @@ class MaterialVendor(TimestampedModel):
 class Material(TimestampedModel):
     slug = models.SlugField(max_length=255, blank=True, null=True)
     name = models.CharField(max_length=255)
-    images = models.TextField(blank=True, null=True)
     origin_country = models.CharField(max_length=255, blank=True, null=True)
     level = models.PositiveBigIntegerField(default=0)
     care_instruction = models.TextField(blank=True, null=True)
@@ -80,7 +94,7 @@ class Material(TimestampedModel):
 
 class MaterialImage(TimestampedModel):
     material = models.ForeignKey(Material, on_delete=models.CASCADE)
-    image = models.FileField(upload_to=material_upload_to)
+    image = models.FileField(upload_to=upload_to_path)
 
     def __str__(self) -> str:
         return "%s - %s" % (self.item.name, self.id)
@@ -95,8 +109,8 @@ class MaterialFeature(TimestampedModel):
     water = models.TextField(blank=True, null=True)
     frost = models.TextField(blank=True, null=True)
 
-    def __str__(self):
-        return "%s" % (self.material.name)
+    def __str__(self) -> str:
+        return self.material.name
 
 
 class MaterialApplication(TimestampedModel):
@@ -108,8 +122,8 @@ class MaterialApplication(TimestampedModel):
     fireplace = models.TextField(blank=True, null=True)
     outdoor = models.TextField(blank=True, null=True)
 
-    def __str__(self):
-        return "%s" % (self.material.name)
+    def __str__(self) -> str:
+        return self.material.name
 
 
 class MaterialTechnicalSpecification(TimestampedModel):
@@ -121,10 +135,10 @@ class MaterialTechnicalSpecification(TimestampedModel):
     open_porosity = models.TextField(blank=True, null=True)
     abrasion_strength = models.TextField(blank=True, null=True)
     compressive_strength = models.TextField(blank=True, null=True)
-    attachement = models.FileField(upload_to=material_technical_specification_upload_to)
+    attachement = models.FileField(upload_to=upload_to_path)
 
-    def __str__(self):
-        return "%s" % (self.material.name)
+    def __str__(self) -> str:
+        return self.material.name
 
 
 class KitchenItem(TimestampedModel):
@@ -146,7 +160,7 @@ class KitchenItem(TimestampedModel):
 
 class KitchenItemImage(TimestampedModel):
     item = models.ForeignKey(KitchenItem, on_delete=models.CASCADE)
-    image = models.FileField(upload_to=kitchen_item_upload_to)
+    image = models.FileField(upload_to=upload_to_path)
 
     def __str__(self) -> str:
         return "%s - %s" % (self.item.name, self.id)
@@ -162,8 +176,8 @@ class InspirationCategory(TimestampedModel):
 
 class Inspiration(TimestampedModel):
     category = models.ForeignKey(InspirationCategory, on_delete=models.CASCADE)
-    main_image = models.FileField(upload_to="")
-    sub_image = models.FileField(upload_to="")
+    main_image = models.FileField(upload_to=upload_to_path)
+    sub_image = models.FileField(upload_to=upload_to_path)
     title = models.CharField(max_length=255, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     is_active = models.BooleanField(default=True)

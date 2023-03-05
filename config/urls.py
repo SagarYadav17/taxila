@@ -3,11 +3,12 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from taxila.views import (
-    KitchenCategoryListView,
-    KitchenItemListView,
-    MaterialCategoryListView,
-    MaterialListView,
-    MaterialVendorListView,
+    HomepageAPIView,
+    InspirationView,
+    KitchenView,
+    MaterialView,
+    MetaDataView,
+    VideoView,
 )
 
 admin.site.site_header = "Taxila Stone Administration"
@@ -17,11 +18,12 @@ admin.site.site_title = "Administration"
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("django_prometheus.urls")),
-    path("kitchen-category/", KitchenCategoryListView.as_view(), name="kitchen-category"),
-    path("material-category/", MaterialCategoryListView.as_view(), name="material-category"),
-    path("material-vendor/", MaterialVendorListView.as_view(), name="material-vendor"),
-    path("material/", MaterialListView.as_view(), name="material"),
-    path("kitchen/", KitchenItemListView.as_view(), name="kitchen"),
+    path("homepage/", HomepageAPIView.as_view(), name="homepage"),
+    path("material/", MaterialView.as_view(), name="material"),
+    path("kitchen/", KitchenView.as_view(), name="kitchen"),
+    path("inspiration/", InspirationView.as_view(), name="inspiration"),
+    path("videos/", VideoView.as_view(), name="videos"),
+    path("meta-data/<str:slug>/", MetaDataView.as_view(), name="meta-data"),
 ]
 
 

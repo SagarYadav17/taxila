@@ -1,34 +1,16 @@
 from rest_framework import serializers
 from taxila.models import (
-    KitchenCategory,
+    Inspiration,
     KitchenItem,
     KitchenItemImage,
     Material,
     MaterialApplication,
-    MaterialCategory,
     MaterialFeature,
     MaterialImage,
     MaterialTechnicalSpecification,
-    MaterialVendor,
+    MetaData,
+    Video,
 )
-
-
-class KitchenCategorySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = KitchenCategory
-        fields = "__all__"
-
-
-class MaterialCategorySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = MaterialCategory
-        fields = "__all__"
-
-
-class MaterialVendorSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = MaterialVendor
-        fields = "__all__"
 
 
 class MaterialFeatureSerializer(serializers.ModelSerializer):
@@ -51,8 +33,8 @@ class MaterialTechnicalSpecificationSerializer(serializers.ModelSerializer):
 
 class MaterialSerializer(serializers.ModelSerializer):
     images = serializers.SerializerMethodField()
-    category = serializers.CharField(source="category.name")
-    vendor = serializers.CharField(source="vendor.name")
+    category = serializers.ReadOnlyField(source="category.name")
+    vendor = serializers.ReadOnlyField(source="vendor.name")
     feature = serializers.SerializerMethodField()
     application = serializers.SerializerMethodField()
     technical_specification = serializers.SerializerMethodField()
@@ -74,7 +56,7 @@ class MaterialSerializer(serializers.ModelSerializer):
     def get_application(self, obj):
         try:
             queryset = MaterialFeature.objects.get(material_id=obj.id)
-            return MaterialFeatureSerializer(queryset).data
+            return MaterialApplicationSerializer(queryset).data
         except MaterialFeature.DoesNotExist:
             return None
 
@@ -88,11 +70,33 @@ class MaterialSerializer(serializers.ModelSerializer):
 
 class KitchenItemSerializer(serializers.ModelSerializer):
     images = serializers.SerializerMethodField()
-    category = serializers.CharField(source="category.name")
+    category = serializers.ReadOnlyField(source="category.name")
 
     class Meta:
         model = KitchenItem
         fields = "__all__"
 
-    def get_images(self, obj):
-        return [item.image.url for item in KitchenItemImage.objects.filter(item=obj)]
+    def get_images(self, obj) -> list:
+        return [item.image.url for item in KitchenItemImage.objects.filter(item_id=obj.id)]
+
+
+class MetaDataSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MetaData
+        fields = "__all__"
+
+
+class InspirationSerializer(serializers.ModelSerializer):
+    category_name = serializers.ReadOnlyField(source="category.name")
+
+    class Meta:
+        model = Inspiration
+        fields = "__all__"
+
+
+class VideoSerializer(serializers.ModelSerializer):
+    category_name = serializers.ReadOnlyField(source="category.name")
+
+    class Meta:
+        model = Video
+        fields = "__all__"

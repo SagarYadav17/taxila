@@ -1,0 +1,328 @@
+[
+    {
+        "id": 1,
+        "IMAGE": "/_next/static/images/1. CI Newspaper - July 3-Aug 7, 2021 (convert.io)-b0c28ec1eb195a585b3b3e5fd45fc58e.webp",
+        "CATEGORY": "Featured",
+        "WEBSITE": "Community Impact Newspaper",
+        "DATE": " July 3 - Aug 7, 2021",
+        "EDITION": "Volume 11, Issue 5, Page 16",
+        "LINK": "https://editions.communityimpact.com/view/704356651/16/"
+    },
+    {
+        "id": 2,
+        "IMAGE": "/_next/static/images/2. Paper City - Dallas, September 2021 (convert.io)-dd0276135260cd754d912ba798cdac7f.webp",
+        "CATEGORY": "Featured",
+        "WEBSITE": "Paper City",
+        "DATE": "September 2021",
+        "EDITION": "Dallas, Page 13 - 14",
+        "LINK": "http://papercitymagazine.uberflip.com/i/1405904-papercity-dallas-september-2021/13?"
+    },
+    {
+        "id": 3,
+        "IMAGE": "/_next/static/images/3. CI Newspaper - Sept 6 -Oct 2, 2021-56ebc632862183d15385388eaed87a7e.webp",
+        "CATEGORY": "Featured",
+        "WEBSITE": "Community Impact Newspaper",
+        "DATE": "Sept 6 - Oct 2, 2021",
+        "EDITION": "Volume 11, Issue 7, Page 22",
+        "LINK": "https://editions.communityimpact.com/view/838292375/22/"
+    },
+    {
+        "id": 4,
+        "IMAGE": "/_next/static/images/4. CI Newspaper - Oct 3 - 31 2021-1d0521471d843f8655ecf6bb00f1c427.webp",
+        "CATEGORY": "Featured",
+        "WEBSITE": "Community Impact Newspaper",
+        "DATE": "Oct 3 - 31, 2021",
+        "EDITION": "Volume 11, Issue 8, Page 10",
+        "LINK": "https://editions.communityimpact.com/view/533419637/10/"
+    },
+    {
+        "id": 5,
+        "IMAGE": "/_next/static/images/5. Paper City - Dallas, November 2021-c0a4b4780c27fa4950309ae18a247775.webp",
+        "CATEGORY": "Featured",
+        "WEBSITE": "Paper City",
+        "DATE": "November 2021",
+        "EDITION": "Dallas, Page 15 - 16",
+        "LINK": "http://papercitymagazine.uberflip.com/i/1420844-papercity-dallas-november-2021/15?"
+    },
+    {
+        "id": 6,
+        "IMAGE": "/_next/static/images/6. CI Newspaper - Nov 1 - Dec 5 2021-f4671b36f5443f7e1f5a651a7a6d0067.webp",
+        "CATEGORY": "Featured",
+        "WEBSITE": "Community Impact Newspaper",
+        "DATE": "Nov 1 - Dec 5, 2021",
+        "EDITION": "Volume 11, Issue 9, Page 14",
+        "LINK": "https://editions.communityimpact.com/view/770494646/14/"
+    },
+    {
+        "id": 7,
+        "IMAGE": "/_next/static/images/7. Paper City Article - December 9, 2021-273509dc513551548c013d553f46c690.webp",
+        "CATEGORY": "Article",
+        "WEBSITE": "Paper City",
+        "DATE": "December 9, 2021",
+        "LINK": "https://www.papercitymag.com/society/dallas-design-taxila-stone-showroom-surfaces-stone-artists-designers/",
+        "HEADING": "Taxila Stone Celebrates Local Artists and Designers at Its Dallas Showroom",
+        "BODY_TEXT": "An inspiring night for design professionals, the Taxila Stone Designer Showroom event was well attended by a variety of industry leaders — from local property owners and architects to the city’s most celebrated designers, talented artists, and design-savvy individuals in the community."
+    },
+    {
+        "id": 8,
+        "IMAGE": "/_next/static/images/8. Modern Luxury - Dallas, December 2021-db28ac1cc41df52feca000a92aa8010b.webp",
+        "CATEGORY": "Article",
+        "WEBSITE": "Modern Luxury",
+        "DATE": "December 2021",
+        "EDITION": "Dallas, Page 184",
+        "LINK": "http://digital.modernluxury.com/publication/?m=3620&amp;i=729885&amp;p=186&amp;ver=html5",
+        "HEADING": "Interview with the CEO, Hari Polavarapu",
+        "BODY_TEXT": "As the CEO of Taxila Stone, a wholesale distributor of hand-selected natural and engineered stone surfaces, Hari Polavarapu is surrounded with timeless beauty."
+    },
+    {
+        "id": 9,
+        "IMAGE": "/_next/static/images/9. Paper City - Dallas, January _ February 2022-02649f1bf787bdc2b23fc0e29a9c9946.webp",
+        "CATEGORY": "Featured",
+        "WEBSITE": "Paper City",
+        "DATE": "January &amp; February 2022",
+        "EDITION": "Dallas, Page 15 - 16",
+        "LINK": "http://papercitymagazine.uberflip.com/i/1439511-papercity-dallas-january-february-2022/15?"
+    },
+    {
+        "id": 10,
+        "IMAGE": "/_next/static/images/10. Modern Luxury Interiors - Texas, February 2022-a1fa2c4bf5d5c98be144b12ecee23c6c.webp",
+        "CATEGORY": "Featured",
+        "WEBSITE": "Modern Luxury - Interiors",
+        "DATE": "Febraury 2022",
+        "EDITION": "Texas, Page 22 - 23",
+        "LINK": "https://digital.modernluxury.com/publication/?m=22590&amp;i=737416&amp;p=24&amp;ver=html5"
+    },
+    {
+        "id": 11,
+        "IMAGE": "/_next/static/images/11. Modern Luxury - Dallas, March 2022-bd70a382675351967fd97b82836f2865.webp",
+        "CATEGORY": "Featured",
+        "WEBSITE": "Modern Luxury",
+        "DATE": "March 2022",
+        "EDITION": "Dallas, Page 55",
+        "LINK": "https://digital.modernluxury.com/publication/?m=3620&amp;i=738656&amp;p=56&amp;ver=html5"
+    },
+    {
+        "id": 12,
+        "IMAGE": "/_next/static/images/12. Paper City - Dallas, March 2022-1ad175b25442532ed911e47468c69e85.webp",
+        "CATEGORY": "Featured",
+        "WEBSITE": "Paper City",
+        "DATE": "March 2022",
+        "EDITION": "Dallas, Page 58",
+        "LINK": "http://papercitymagazine.uberflip.com/i/1455228-papercity-dallas-march-2022/57?"
+    },
+    {
+        "id": 13,
+        "IMAGE": "/_next/static/images/13. Voyage Dallas - March 17, 2022-23f9a3370b7a4310d026ba8b029ff6f2.webp",
+        "CATEGORY": "Article",
+        "WEBSITE": "Voyage Dallas",
+        "DATE": "March 17, 2022",
+        "LINK": "http://voyagedallas.com/interview/conversations-with-josh-caballero/",
+        "HEADING": "Conversations with Josh Caballero",
+        "BODY_TEXT": "Hi Josh, so excited to have you with us today. What can you tell us about your story?\nHow we got here is a complex story. Here’s the short version – The principals of the three show rooms opening in the metroplex come from hospitality and furniture backgrounds."
+    },
+    {
+        "id": 14,
+        "IMAGE": "/_next/static/images/14. Paper City - Dallas, April 2022-55f0ac7f5246271ab391d5c8748dbaff.webp",
+        "CATEGORY": "Featured",
+        "WEBSITE": "Paper City",
+        "DATE": "April 2022",
+        "EDITION": "Dallas, Page 7-8",
+        "LINK": "http://papercitymagazine.uberflip.com/i/1462583-papercity-dallas-april-2022/7?"
+    },
+    {
+        "id": 15,
+        "IMAGE": "/_next/static/images/15. Paper City - Dallas, May 2022-169a25dc30062de364edbcaea8abf25a.webp",
+        "CATEGORY": "Featured",
+        "WEBSITE": "Paper City",
+        "DATE": "May 2022",
+        "EDITION": "Dallas, Page 52",
+        "LINK": "http://papercitymagazine.uberflip.com/i/1465756-papercity-dallas-may-2022/51?"
+    },
+    {
+        "id": 16,
+        "IMAGE": "/_next/static/images/16. Modern Luxury Interiors - Texas, May 2022-7751a3c71715b56eb98125deed99a662.webp",
+        "CATEGORY": "Featured",
+        "WEBSITE": "Modern Luxury - Interiors",
+        "DATE": "May 2022",
+        "EDITION": "Texas, Page 16-17",
+        "LINK": "https://digital.modernluxury.com/publication/?m=22590&i=746790&p=18&ver=html5"
+    },
+    {
+        "id": 17,
+        "IMAGE": "/_next/static/images/17. M2G Ventures - May 2022-381c1d425a4e6e217c503e8bd9057606.webp",
+        "CATEGORY": "Article",
+        "WEBSITE": "M2G Ventures",
+        "DATE": "May 26, 2022",
+        "LINK": "https://www.m2gventures.com/press/m2gs-urban-industrial-redevelopment-lands-two-tenants/",
+        "HEADING": "M2G’s Urban Industrial Redevelopment Lands Two Tenants",
+        "BODY_TEXT": "M2G Ventures, a North Texas-based real estate investment and development company, announced two tenants under construction, Dynasty Spirits and Taxila Stone totaling 136,020 square feet, at M2G’s urban industrial redevelopment, PROTO Park."
+    },
+    {
+        "id": 18,
+        "IMAGE": "/_next/static/images/18. Fort Worth Inc. - May 2022-f35d42af0ab342a9c7d372b4b59dba19.webp",
+        "CATEGORY": "Article",
+        "WEBSITE": "Fort Worth Inc.",
+        "DATE": "May 26, 2022",
+        "LINK": "https://fortworthinc.com/news/two-companies-moving-into-m2g-ventures-proto-park/",
+        "HEADING": "Two Companies Moving into M2G Ventures' PROTO Park",
+        "BODY_TEXT": "Taxila Stone is a wholesale distributor of hand-selected natural and engineered stone surfaces and works with some of the most exclusive stone quarries in the world, from marble to granite, quartzite, onyx, quartz, and travertine, among others."
+    },
+    {
+        "id": 19,
+        "IMAGE": "/_next/static/images/19. Paper City - Dallas, June 2022-d3d89c599c7db2bcbd95defc1d7cafaa.webp",
+        "CATEGORY": "Featured",
+        "WEBSITE": "Paper City",
+        "DATE": "June 2022",
+        "EDITION": "Dallas, Page 48",
+        "LINK": "http://papercitymagazine.uberflip.com/i/1468547-papercity-dallas-june-2022/47?"
+    },
+    {
+        "id": 20,
+        "IMAGE": "/_next/static/images/20. Modern Luxury - Dallas, July 2022-68935f7c1886ee9ec8a55b711b4ae1c3.webp",
+        "CATEGORY": "Featured",
+        "WEBSITE": "Modern Luxury",
+        "DATE": "July 2022",
+        "EDITION": "Dallas, Page 23",
+        "LINK": "https://digital.modernluxury.com/publication/?m=3620&i=751131&p=24&ver=html5"
+    },
+    {
+        "id": 21,
+        "IMAGE": "/_next/static/images/21. Modern Luxury Dallas Design District, 2022-23-b62798434bd77aa6291f018dade2e460.webp",
+        "CATEGORY": "Featured",
+        "WEBSITE": "Modern Luxury - Guide to the Design District",
+        "DATE": "2022-23",
+        "EDITION": "Dallas, Page 6-7",
+        "LINK": "https://digital.modernluxury.com/publication/?m=60522&i=750374&p=8&ver=html5"
+    },
+    {
+        "id": 22,
+        "IMAGE": "/_next/static/images/22. Paper City - Dallas, July August 2022-3070a60a84eadb8ee1e37330a851a10b.webp",
+        "CATEGORY": "Featured",
+        "WEBSITE": "Paper City",
+        "DATE": "July-August 2022",
+        "EDITION": "Dallas, Page 9-10",
+        "LINK": "http://papercitymagazine.uberflip.com/i/1471747-papercity-dallas-july-august-2022/9?"
+    },
+    {
+        "id": 23,
+        "IMAGE": "/_next/static/images/23. Modern Luxury Interiors - Texas, August 2022-ec32c82f3a1769745e34839ee86e649c.webp",
+        "CATEGORY": "Featured",
+        "WEBSITE": "Modern Luxury - Interiors",
+        "DATE": "August 2022",
+        "EDITION": "Texas, Page 18-19",
+        "LINK": "https://digital.modernluxury.com/publication/?m=22590&i=753788&p=20&pp=2&ver=html5"
+    },
+    {
+        "id": 24,
+        "IMAGE": "/_next/static/images/24. M2G Ventures - August 2022-54229fd779bb9f2c6e261d86110aa11a.webp",
+        "CATEGORY": "Article",
+        "WEBSITE": "M2G Ventures",
+        "DATE": "August 2022",
+        "LINK": "https://www.m2gventures.com/blog/tenant-spotlight-taxila-stone/",
+        "HEADING": "Taxila Stone | PROTO Park - M2G Ventures",
+        "BODY_TEXT": "Beyond the Surface\nTaxila Stone is unlike any other wholesale stone distributor. As a wholesale distributor of hand-selected natural and engineered stone surfaces, Taxila works with some of the most exclusive stone quarries in the world, from marble to granite, quartzite, onyx, quartz, and travertine, to name a few."
+    },
+    {
+        "id": 25,
+        "IMAGE": "/_next/static/images/25. Modern Luxury - Dallas, Sept 2022-1a7d5a9dc5328efa30a31d6f32547031.webp",
+        "CATEGORY": "Featured",
+        "WEBSITE": "Modern Luxury",
+        "DATE": "September 2022",
+        "EDITION": "Dallas, Page 59",
+        "LINK": "https://digital.modernluxury.com/publication/?m=3620&i=757880&p=60&ver=html5"
+    },
+    {
+        "id": 26,
+        "IMAGE": "/_next/static/images/26. Paper City - Dallas, Sept 2022-31f455d5451a64692945e8727845ccae.webp",
+        "CATEGORY": "Featured",
+        "WEBSITE": "Paper City",
+        "DATE": "September 2022",
+        "EDITION": "Dallas, Page 27-28",
+        "LINK": "http://papercitymagazine.uberflip.com/i/1477684-papercity-dallas-september-2022/27?"
+    },
+    {
+        "id": 27,
+        "IMAGE": "/_next/static/images/27. Newswires - September 2022-38a41ee1a05e2ee35150ff1c2f782af7.webp",
+        "CATEGORY": "Article",
+        "WEBSITE": "Newswires",
+        "DATE": "September 29, 2022",
+        "LINK": "https://www.einnews.com/pr_news/593238362/international-italian-luxury-brand-minotticucine-and-maistri-are-coming-to-dallas-opening-their-kitchen-design-showroom",
+        "HEADING": "International Italian Luxury Brand minotticucine and MAISTRI Are Coming to Dallas, Opening Their Kitchen Design Showroom",
+        "BODY_TEXT": "International Italian luxury brand minotticucine is coming to the Dallas Design District, opening their first kitchen design showroom in Texas on October 13th."
+    },
+    {
+        "id": 28,
+        "IMAGE": "/_next/static/images/28. Modern Luxury Interiors - Texas, October 2022-c0c858346585b29ea75a99cad29ca1b9.webp",
+        "CATEGORY": "Featured",
+        "WEBSITE": "Modern Luxury - Interiors",
+        "DATE": "October 2022",
+        "EDITION": "Dallas, Page 10-11",
+        "LINK": "https://digital.modernluxury.com/publication/?m=22590&i=764168&p=12&pp=2&ver=html5"
+    },
+    {
+        "id": 29,
+        "IMAGE": "/_next/static/images/29. Home Furnishings Business - October 2022-199156863bfc5b53d347d96d0f6e716d.webp",
+        "CATEGORY": "Article",
+        "WEBSITE": "Home Furnishings Business",
+        "DATE": "October 5, 2022",
+        "LINK": "http://hfbusiness.com/hfbnow/articleid/22873/minotticucine-and-taxila-stone-to-bring-stand-alone-showroom-to-dallas",
+        "HEADING": "minotticucine and Taxila Stone to Bring Stand Alone Showroom to Dallas",
+        "BODY_TEXT": "International Italian luxury brand minotticucine is coming to the Dallas Design District, opening their first kitchen design showroom in Texas."
+    },
+    {
+        "id": 30,
+        "IMAGE": "/_next/static/images/30. Paper City - Dallas, Oct 2022-1980e234b4cafff1b22cffc801039ff9.webp",
+        "CATEGORY": "Featured",
+        "WEBSITE": "Paper City",
+        "DATE": "October 2022",
+        "EDITION": "Dallas, Page 44",
+        "LINK": "http://papercitymagazine.uberflip.com/i/1480367-papercity-dallas-october-2022/43?"
+    },
+    {
+        "id": 31,
+        "IMAGE": "/_next/static/images/31. Furniture, Lighting _ Decor- Oct 2022-2527de4e63aedf54337197b5cffb4bc8.webp",
+        "CATEGORY": "Article",
+        "WEBSITE": "Furniture, Lighting &amp; Decor",
+        "DATE": "October 10, 2022",
+        "LINK": "https://www.furniturelightingdecor.com/international-italian-luxury-brand-minotticucine-coming-dallas",
+        "HEADING": "International Italian Luxury Brand minotticucine coming to Dallas",
+        "BODY_TEXT": "International Italian luxury brand minotticucine is coming to the Dallas Design District, opening their first kitchen design showroom in Texas."
+    },
+    {
+        "id": 32,
+        "IMAGE": "/_next/static/images/32. Business of Home - Oct 2022-1a155d930a0300b229d4b8f54f38e290.webp",
+        "CATEGORY": "Article",
+        "WEBSITE": "Business of Home",
+        "DATE": "October 31, 2022",
+        "LINK": "https://businessofhome.com/articles/schumacher-s-new-space-in-nashville-jeremiah-brent-opens-an-la-flagship-and-more",
+        "HEADING": "Taxila Stone collaborated with minotticucine to open a showroom in the Dallas Design District.",
+        "BODY_TEXT": "The brand’s only stand-alone location in North America, the nearly 6,000-square-foot space features personalized and minimalist kitchen designs and stone-sourcing options for surfaces."
+    },
+    {
+        "id": 33,
+        "IMAGE": "/_next/static/images/33. Modern Luxury - Dallas, Nov 2022-91ab8276a20fe55d496b7c9439921813.webp",
+        "CATEGORY": "Featured",
+        "WEBSITE": "Modern Luxury",
+        "DATE": "November 2022",
+        "EDITION": "Dallas, Page 69",
+        "LINK": "https://digital.modernluxury.com/publication/?m=3620&i=765202&p=70&ver=html5"
+    },
+    {
+        "id": 34,
+        "IMAGE": "/_next/static/images/34. Paper City - Nov 3, 2022-d9f1556f33e11dd112b6c011448e7b24.webp",
+        "CATEGORY": "Article",
+        "WEBSITE": "Paper City",
+        "DATE": "November 3, 2022",
+        "EDITION": "",
+        "LINK": "https://www.papercitymag.com/home-design/texas-design-week-dallas-showcases-bespoke-interiors-minotticucine/"
+    },
+    {
+        "id": 35,
+        "IMAGE": "/_next/static/images/35. Paper City - Nov 8, 2022-e8f371c52e9d112ba582177ad90a5973.webp",
+        "CATEGORY": "Article",
+        "WEBSITE": "Paper City",
+        "DATE": "November 8, 2022",
+        "EDITION": "",
+        "LINK": "https://www.papercitymag.com/home-design/minotticucine-dallas-design-district-luxury-italian-kitchen-maistri/"
+    }
+]

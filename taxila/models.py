@@ -196,8 +196,10 @@ class VideoCategory(TimestampedModel):
 
 class Video(TimestampedModel):
     category = models.ForeignKey(VideoCategory, on_delete=models.CASCADE)
+    title = models.CharField(max_length=255, blank=True, null=True)
+    company = models.CharField(max_length=255, blank=True, null=True)
     video_url = models.URLField(max_length=255)
     is_active = models.BooleanField(default=True)
 
     def __str__(self) -> str:
-        return self.name
+        return "%s - %s" % (self.title, self.category.name)

@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Plugins
     "storages",
+    "corsheaders",
     "rest_framework",
     "django_prometheus",
     # App
@@ -47,6 +48,7 @@ MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
@@ -155,3 +157,10 @@ REST_FRAMEWORK = {
 
 
 CACHE_DEFAULT_TIMEOUT = 900  # 15 Minutes (in seconds)
+
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:8000",
+    "https://*.onrender.com/",
+]
+
+CORS_ORIGIN_ALLOW_ALL = True

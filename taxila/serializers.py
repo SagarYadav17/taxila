@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from taxila.models import (
     Inspiration,
+    InspirationDetail,
     KitchenItem,
     KitchenItemImage,
     Material,
@@ -86,12 +87,26 @@ class MetaDataSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
+class InspirationDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = InspirationDetail
+        fields = "__all__"
+
+
 class InspirationSerializer(serializers.ModelSerializer):
     category_name = serializers.ReadOnlyField(source="category.name")
+    detail = serializers.SerializerMethodField()
 
     class Meta:
         model = Inspiration
         fields = "__all__"
+
+    def get_detail(self, obj):
+        try:
+            queryset = InspirationDetail.objects.filter(inspiration_id=obj.id)
+            return InspirationDetailSerializer(queryset, many=True).data
+        except InspirationDetail.DoesNotExist:
+            return None
 
 
 class VideoSerializer(serializers.ModelSerializer):

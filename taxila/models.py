@@ -177,13 +177,21 @@ class InspirationCategory(TimestampedModel):
 class Inspiration(TimestampedModel):
     category = models.ForeignKey(InspirationCategory, on_delete=models.CASCADE)
     main_image = models.FileField(upload_to=upload_to_path)
-    sub_image = models.FileField(upload_to=upload_to_path)
     title = models.CharField(max_length=255, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     is_active = models.BooleanField(default=True)
 
     def __str__(self) -> str:
         return "%s - %s - %s" % (self.id, self.category.name, self.title)
+
+
+class InspirationDetail(TimestampedModel):
+    inspiration = models.ForeignKey(Inspiration, on_delete=models.CASCADE)
+    title = models.CharField(max_length=255, blank=True, null=True)
+    image = models.FileField(upload_to=upload_to_path)
+
+    def __str__(self) -> str:
+        return "%s - %s" % (self.inspiration.title, self.title)
 
 
 class VideoCategory(TimestampedModel):

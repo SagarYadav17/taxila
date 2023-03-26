@@ -20,6 +20,7 @@ from taxila.models import (
     MetaData,
     ParentCategory,
     Video,
+    VideoCategory,
 )
 from django.conf import settings
 
@@ -57,7 +58,7 @@ class MaterialView(ListAPIView):
 
         return queryset
 
-    @method_decorator(cache_page(60 * 15))
+    @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
@@ -74,7 +75,7 @@ class KitchenView(ListAPIView):
 
         return queryset
 
-    @method_decorator(cache_page(60 * 15))
+    @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
@@ -91,7 +92,7 @@ class InspirationView(ListAPIView):
 
         return queryset
 
-    @method_decorator(cache_page(60 * 15))
+    @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
@@ -108,7 +109,7 @@ class VideoView(ListAPIView):
 
         return queryset
 
-    @method_decorator(cache_page(60 * 15))
+    @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
@@ -118,6 +119,46 @@ class MetaDataView(RetrieveAPIView):
     queryset = MetaData.objects
     lookup_field = "slug"
 
-    @method_decorator(cache_page(60 * 15))
+    @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
+
+
+class InspirationCategoryView(APIView):
+    def get(self, request):
+        queryset = InspirationCategory.objects.filter(is_active=True).values()
+        return Response(queryset)
+
+    @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
+
+
+class KitchenCategoryView(APIView):
+    def get(self, request):
+        queryset = KitchenCategory.objects.filter(is_active=True).values()
+        return Response(queryset)
+
+    @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
+
+
+class MaterialCategoryView(APIView):
+    def get(self, request):
+        queryset = MaterialCategory.objects.filter(is_active=True).values()
+        return Response(queryset)
+
+    @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
+
+
+class VideoCategoryView(APIView):
+    def get(self, request):
+        queryset = VideoCategory.objects.filter(is_active=True).values()
+        return Response(queryset)
+
+    @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)

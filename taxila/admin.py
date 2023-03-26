@@ -1,5 +1,6 @@
 from django.contrib import admin
 from taxila.models import (
+    InspirationDetail,
     MaterialApplication,
     MaterialCategory,
     MaterialFeature,
@@ -115,3 +116,9 @@ class VideoAdmin(admin.ModelAdmin):
     list_display = ("id", "ranking", "category", "video_url", "is_active")
     search_fields = ("video_url",)
     list_filter = ("is_active", "category")
+
+
+@admin.register(InspirationDetail)
+class InspirationDetailAdmin(admin.ModelAdmin):
+    list_display = ("id", "ranking", "inspiration", "title")
+    search_fields = ("title",)

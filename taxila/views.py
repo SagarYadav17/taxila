@@ -6,11 +6,13 @@ from rest_framework.response import Response
 from taxila.serializers import (
     InspirationSerializer,
     KitchenItemSerializer,
+    MaterialCategoryDetailSerializer,
     MaterialSerializer,
     MetaDataSerializer,
     VideoSerializer,
 )
 from taxila.models import (
+    HomepageBanner,
     Inspiration,
     InspirationCategory,
     KitchenCategory,
@@ -30,32 +32,48 @@ class HomepageAPIView(APIView):
     @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
     def get(self, request):
         parent_category_objs = ParentCategory.objects.filter(is_active=True)
-        parent_data = {}
+        parent_data = []
 
         for obj in parent_category_objs:
-            parent_data[obj.name.lower()] = MaterialCategory.objects.filter(
-                parent_category_id=obj.id, is_active=True
-            ).values()
+            data = {
+                "id": obj.id,
+                "name": obj.name,
+                "items": MaterialCategory.objects.filter(parent_category_id=obj.id).values("id", "slug", "name"),
+            }
+            parent_data.append(data)
 
         data = {
             "material_category": parent_data,
             "kitchen_category": KitchenCategory.objects.filter(is_active=True).values(),
-            "inspiration_category": InspirationCategory.objects.filter(is_active=True).values(),
         }
 
         return Response(data)
 
 
-class MaterialView(ListAPIView):
-    serializer_class = MaterialSerializer
+class MaterialCategoryDetailView(ListAPIView):
+    serializer_class = MaterialCategoryDetailSerializer
+    queryset = MaterialCategory.objects.filter(is_active=True)
 
     def get_queryset(self):
-        queryset = Material.objects.filter(is_active=True, category__is_active=True, vendor__is_active=True)
+        queryset = MaterialCategory.objects.filter(is_active=True, parent_category__is_active=True)
 
         category = self.request.query_params.get("category")
         if category:
-            queryset = queryset.filter(category_id=category)
+            queryset = queryset.filter(parent_category_id=category)
 
+        return super().get_queryset()
+
+    @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
+
+
+class MaterialView(RetrieveAPIView):
+    serializer_class = MaterialSerializer
+    lookup_field = "slug"
+
+    def get_queryset(self):
+        queryset = Material.objects.filter(is_active=True, category__is_active=True, vendor__is_active=True)
         return queryset
 
     @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
@@ -158,6 +176,22 @@ class VideoCategoryView(APIView):
     def get(self, request):
         queryset = VideoCategory.objects.filter(is_active=True).values()
         return Response(queryset)
+
+    @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
+
+
+class BannerImagesView(APIView):
+    def get(self, request):
+        queryset = HomepageBanner.objects.filter(is_active=True)
+
+        data = {
+            "desktop": queryset.filter(banner_type="desktop").values_list("image", flat=True),
+            "mobile": queryset.filter(banner_type="mobile").values_list("image", flat=True),
+        }
+
+        return Response(data)
 
     @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
     def dispatch(self, request, *args, **kwargs):

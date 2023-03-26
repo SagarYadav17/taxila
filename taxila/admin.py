@@ -1,13 +1,11 @@
 from django.contrib import admin
 from taxila.models import (
+    HomepageBanner,
     InspirationDetail,
-    MaterialApplication,
     MaterialCategory,
-    MaterialFeature,
     KitchenCategory,
     KitchenItem,
     Material,
-    MaterialTechnicalSpecification,
     MaterialVendor,
     MaterialImage,
     KitchenItemImage,
@@ -47,25 +45,7 @@ class MaterialAdmin(admin.ModelAdmin):
 @admin.register(MaterialImage)
 class MaterialImageAdmin(admin.ModelAdmin):
     list_display = ("id", "ranking", "material")
-    search_fields = ("item",)
-
-
-@admin.register(MaterialFeature)
-class MaterialFeatureAdmin(admin.ModelAdmin):
-    list_display = ("id", "material")
-    search_fields = ("item",)
-
-
-@admin.register(MaterialApplication)
-class MaterialApplicationAdmin(admin.ModelAdmin):
-    list_display = ("id", "material")
-    search_fields = ("item",)
-
-
-@admin.register(MaterialTechnicalSpecification)
-class MaterialTechnicalSpecificationAdmin(admin.ModelAdmin):
-    list_display = ("id", "material")
-    search_fields = ("item",)
+    search_fields = ("material__name",)
 
 
 @admin.register(KitchenItem)
@@ -77,7 +57,7 @@ class KitchenItemAdmin(admin.ModelAdmin):
 @admin.register(KitchenItemImage)
 class KitchenItemImageAdmin(admin.ModelAdmin):
     list_display = ("id", "ranking", "item")
-    search_fields = ("item",)
+    search_fields = ("item__name",)
 
 
 @admin.register(ParentCategory)
@@ -122,3 +102,9 @@ class VideoAdmin(admin.ModelAdmin):
 class InspirationDetailAdmin(admin.ModelAdmin):
     list_display = ("id", "ranking", "inspiration", "title")
     search_fields = ("title",)
+
+
+@admin.register(HomepageBanner)
+class HomepageBannerAdmin(admin.ModelAdmin):
+    list_display = ("id", "ranking", "banner_type", "is_active")
+    search_fields = ("is_active", "banner_type")

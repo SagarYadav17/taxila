@@ -27,8 +27,22 @@ class TimestampedModel(models.Model):
         return super().save(*args, **kwargs)
 
 
+class HomepageBanner(TimestampedModel):
+    BANNER_TYPES = (
+        ("desktop", "desktop"),
+        ("mobile", "mobile"),
+    )
+    banner_type = models.CharField(max_length=20, choices=BANNER_TYPES)
+    image = models.FileField(upload_to=upload_to_path)
+    is_active = models.BooleanField(default=True)
+
+    def __str__(self) -> str:
+        return "%s - %s - %s" % (self.id, self.banner_type, self.image)
+
+
 class ParentCategory(TimestampedModel):
     name = models.CharField(max_length=255)
+    slug = models.SlugField(max_length=255, unique=True, blank=True, null=True)
     is_active = models.BooleanField(default=True)
 
     def __str__(self) -> str:
@@ -61,6 +75,17 @@ class KitchenCategory(TimestampedModel):
 class MaterialCategory(TimestampedModel):
     parent_category = models.ForeignKey(ParentCategory, on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
+    banner_image = models.FileField(upload_to=upload_to_path, blank=True, null=True)
+    sub_image = models.FileField(upload_to=upload_to_path, blank=True, null=True)
+    slug = models.SlugField(max_length=255, unique=True, blank=True, null=True)
+    detail = models.TextField(blank=True, null=True)
+    feature_chip = models.PositiveIntegerField(default=0)
+    feature_heat = models.PositiveIntegerField(default=0)
+    feature_stain = models.PositiveIntegerField(default=0)
+    feature_scratch = models.PositiveIntegerField(default=0)
+    feature_water = models.PositiveIntegerField(default=0)
+    feature_frost = models.PositiveIntegerField(default=0)
+    pros = models.TextField(blank=True)
     is_active = models.BooleanField(default=True)
 
     def __str__(self) -> str:
@@ -76,17 +101,36 @@ class MaterialVendor(TimestampedModel):
 
 
 class Material(TimestampedModel):
+    is_active = models.BooleanField(default=True)
     slug = models.SlugField(max_length=255, blank=True, null=True)
+    main_image = models.FileField(upload_to=upload_to_path, blank=True, null=True)
     name = models.CharField(max_length=255)
+    category = models.ForeignKey(MaterialCategory, on_delete=models.CASCADE, blank=True, null=True)
     origin_country = models.CharField(max_length=255, blank=True, null=True)
     level = models.PositiveBigIntegerField(default=0)
     care_instruction = models.TextField(blank=True, null=True)
     meta_description = models.TextField(blank=True, null=True)
     color = models.TextField(blank=True, null=True)
     finish = models.TextField(blank=True, null=True)
-    category = models.ForeignKey(MaterialCategory, on_delete=models.CASCADE, blank=True, null=True)
     vendor = models.ForeignKey(MaterialVendor, on_delete=models.CASCADE, blank=True, null=True)
-    is_active = models.BooleanField(default=True)
+
+    # Applications
+    application_countertops = models.BooleanField(default=False)
+    application_floorings = models.BooleanField(default=False)
+    application_walls = models.BooleanField(default=False)
+    application_shower = models.BooleanField(default=False)
+    application_fireplace = models.BooleanField(default=False)
+    application_outdoor = models.BooleanField(default=False)
+
+    # Technical Specification
+    technical_specification_petrographic_denomination = models.TextField(blank=True, null=True)
+    technical_specification_hardness = models.TextField(blank=True, null=True)
+    technical_specification_water_absorption = models.TextField(blank=True, null=True)
+    technical_specification_apparent_density = models.TextField(blank=True, null=True)
+    technical_specification_open_porosity = models.TextField(blank=True, null=True)
+    technical_specification_abrasion_strength = models.TextField(blank=True, null=True)
+    technical_specification_compressive_strength = models.TextField(blank=True, null=True)
+    technical_specification_attachement = models.FileField(upload_to=upload_to_path)
 
     def __str__(self) -> str:
         return self.name
@@ -100,49 +144,9 @@ class MaterialImage(TimestampedModel):
         return "%s - %s" % (self.item.name, self.id)
 
 
-class MaterialFeature(TimestampedModel):
-    material = models.OneToOneField(Material, on_delete=models.CASCADE)
-    chip = models.TextField(blank=True, null=True)
-    heat = models.TextField(blank=True, null=True)
-    stain = models.TextField(blank=True, null=True)
-    scratch = models.TextField(blank=True, null=True)
-    water = models.TextField(blank=True, null=True)
-    frost = models.TextField(blank=True, null=True)
-
-    def __str__(self) -> str:
-        return self.material.name
-
-
-class MaterialApplication(TimestampedModel):
-    material = models.OneToOneField(Material, on_delete=models.CASCADE)
-    countertops = models.TextField(blank=True, null=True)
-    floorings = models.TextField(blank=True, null=True)
-    walls = models.TextField(blank=True, null=True)
-    shower = models.TextField(blank=True, null=True)
-    fireplace = models.TextField(blank=True, null=True)
-    outdoor = models.TextField(blank=True, null=True)
-
-    def __str__(self) -> str:
-        return self.material.name
-
-
-class MaterialTechnicalSpecification(TimestampedModel):
-    material = models.OneToOneField(Material, on_delete=models.CASCADE)
-    petrographic_denomination = models.TextField(blank=True, null=True)
-    hardness = models.TextField(blank=True, null=True)
-    water_absorption = models.TextField(blank=True, null=True)
-    apparent_density = models.TextField(blank=True, null=True)
-    open_porosity = models.TextField(blank=True, null=True)
-    abrasion_strength = models.TextField(blank=True, null=True)
-    compressive_strength = models.TextField(blank=True, null=True)
-    attachement = models.FileField(upload_to=upload_to_path)
-
-    def __str__(self) -> str:
-        return self.material.name
-
-
 class KitchenItem(TimestampedModel):
     order = models.CharField(max_length=255, blank=True, null=True)
+    slug = models.SlugField(max_length=255, unique=True, blank=True, null=True)
     category = models.ForeignKey(KitchenCategory, on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
     description_en = models.TextField(blank=True, null=True)
@@ -168,6 +172,7 @@ class KitchenItemImage(TimestampedModel):
 
 class InspirationCategory(TimestampedModel):
     name = models.CharField(max_length=255)
+    slug = models.SlugField(max_length=255, unique=True, blank=True, null=True)
     is_active = models.BooleanField(default=True)
 
     def __str__(self) -> str:

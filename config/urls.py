@@ -8,7 +8,7 @@ from taxila.views import (
     InspirationView,
     KitchenCategoryView,
     KitchenView,
-    MaterialCategoryDetailView,
+    ParentMaterialDetailView,
     MaterialCategoryView,
     MaterialView,
     MetaDataView,
@@ -34,9 +34,8 @@ urlpatterns = [
     path("inspiration/", InspirationView.as_view(), name="inspiration"),
     path("kitchen/", KitchenView.as_view(), name="kitchen"),
     path("meta-data/<str:slug>/", MetaDataView.as_view(), name="meta-data"),
-
-    path("material/", MaterialCategoryDetailView.as_view(), name="material"),
-    path("material/<str:slug>/", MaterialView.as_view(), name="material"),
+    path("parent-material/<int:id>/", ParentMaterialDetailView.as_view(), name="material"),
+    path("material/<int:id>/", MaterialView.as_view(), name="material"),
 ]
 
 

@@ -6,7 +6,7 @@ from rest_framework.response import Response
 from taxila.serializers import (
     InspirationSerializer,
     KitchenItemSerializer,
-    MaterialCategoryDetailSerializer,
+    ParentMaterialDetailSerializer,
     MaterialSerializer,
     MetaDataSerializer,
     VideoSerializer,
@@ -50,18 +50,10 @@ class HomepageAPIView(APIView):
         return Response(data)
 
 
-class MaterialCategoryDetailView(ListAPIView):
-    serializer_class = MaterialCategoryDetailSerializer
-    queryset = MaterialCategory.objects.filter(is_active=True)
-
-    def get_queryset(self):
-        queryset = MaterialCategory.objects.filter(is_active=True, parent_category__is_active=True)
-
-        category = self.request.query_params.get("category")
-        if category:
-            queryset = queryset.filter(parent_category_id=category)
-
-        return super().get_queryset()
+class ParentMaterialDetailView(RetrieveAPIView):
+    serializer_class = ParentMaterialDetailSerializer
+    queryset = ParentCategory.objects.filter(is_active=True)
+    lookup_field = "id"
 
     @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
     def dispatch(self, request, *args, **kwargs):
@@ -70,10 +62,15 @@ class MaterialCategoryDetailView(ListAPIView):
 
 class MaterialView(RetrieveAPIView):
     serializer_class = MaterialSerializer
-    lookup_field = "slug"
+    lookup_field = "id"
 
     def get_queryset(self):
-        queryset = Material.objects.filter(is_active=True, category__is_active=True, vendor__is_active=True)
+        queryset = Material.objects.filter(
+            is_active=True,
+            category__is_active=True,
+            vendor__is_active=True,
+            category__parent_category__is_active=True,
+        )
         return queryset
 
     @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))

@@ -8,19 +8,24 @@ from taxila.models import (
     MaterialCategory,
     MaterialImage,
     MetaData,
+    ParentCategory,
     Video,
 )
 
 
-class MaterialCategoryDetailSerializer(serializers.ModelSerializer):
+class ParentMaterialDetailSerializer(serializers.ModelSerializer):
+    sub_categories = serializers.SerializerMethodField()
     products = serializers.SerializerMethodField()
 
     class Meta:
-        model = MaterialCategory
+        model = ParentCategory
         fields = "__all__"
 
+    def get_sub_categories(self, obj):
+        return MaterialCategory.objects.filter(parent_category_id=obj.id).values("id", "slug", "name", "banner_image")
+
     def get_products(self, obj):
-        return Material.objects.filter(category_id=obj.id).values("id", "slug", "name", "main_image")
+        return Material.objects.filter(category__parent_category_id=obj.id).values("id", "slug", "name", "main_image")
 
 
 class MaterialSerializer(serializers.ModelSerializer):
@@ -49,12 +54,6 @@ class KitchenItemSerializer(serializers.ModelSerializer):
 class MetaDataSerializer(serializers.ModelSerializer):
     class Meta:
         model = MetaData
-        fields = "__all__"
-
-
-class InspirationDetailSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = InspirationDetail
         fields = "__all__"
 
 

@@ -183,12 +183,25 @@ class BannerImagesView(APIView):
     def get(self, request):
         queryset = HomepageBanner.objects.filter(is_active=True)
 
+        desktop_urls = [item.image.url for item in queryset.filter(banner_type="desktop")]
+        mobile_urls = [item.image.url for item in queryset.filter(banner_type="mobile")]
+
         data = {
-            "desktop": queryset.filter(banner_type="desktop").values_list("image", flat=True),
-            "mobile": queryset.filter(banner_type="mobile").values_list("image", flat=True),
+            "desktop": desktop_urls,
+            "mobile": mobile_urls,
         }
 
         return Response(data)
+
+    @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
+
+
+class ProductSlugVerifyView(APIView):
+    def get(self, request, slug):
+        exists = Material.objects.filter(slug=slug).exists()
+        return Response({"exists": exists})
 
     @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
     def dispatch(self, request, *args, **kwargs):

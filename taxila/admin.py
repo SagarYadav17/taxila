@@ -9,6 +9,8 @@ from taxila.models import (
     MaterialVendor,
     MaterialImage,
     KitchenItemImage,
+    Media,
+    MediaCategory,
     MetaData,
     ParentCategory,
     Inspiration,
@@ -108,3 +110,16 @@ class InspirationDetailAdmin(admin.ModelAdmin):
 class HomepageBannerAdmin(admin.ModelAdmin):
     list_display = ("id", "ranking", "banner_type", "is_active")
     search_fields = ("is_active", "banner_type")
+
+
+@admin.register(MediaCategory)
+class MediaCategoryAdmin(admin.ModelAdmin):
+    list_display = ("id", "name", "is_active")
+    search_fields = ("name",)
+
+
+@admin.register(Media)
+class MediaAdmin(admin.ModelAdmin):
+    list_display = ("id", "ranking", "title", "category", "is_active")
+    search_fields = ("title",)
+    list_filter = ("is_active", "category")

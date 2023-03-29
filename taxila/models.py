@@ -216,3 +216,24 @@ class Video(TimestampedModel):
 
     def __str__(self) -> str:
         return "%s - %s" % (self.title, self.category.name)
+
+
+class MediaCategory(TimestampedModel):
+    name = models.CharField(max_length=255)
+    is_active = models.BooleanField(default=True)
+
+    def __str__(self) -> str:
+        return self.name
+
+
+class Media(TimestampedModel):
+    category = models.ForeignKey(MediaCategory, on_delete=models.CASCADE)
+    image = models.FileField(upload_to=upload_to_path)
+    title = models.CharField(max_length=255, blank=True, null=True)
+    url = models.URLField(max_length=255)
+    source = models.CharField(max_length=255, blank=True, null=True)
+    publish_date = models.DateField(blank=True, null=True)
+    is_active = models.BooleanField(default=True)
+
+    def __str__(self) -> str:
+        return "%s - %s - %s" % (self.title, self.category.name, self.publish_date)

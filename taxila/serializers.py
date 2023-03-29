@@ -7,6 +7,7 @@ from taxila.models import (
     Material,
     MaterialCategory,
     MaterialImage,
+    Media,
     MetaData,
     ParentCategory,
     Video,
@@ -25,10 +26,12 @@ class ParentMaterialDetailSerializer(serializers.ModelSerializer):
         return MaterialCategory.objects.filter(parent_category_id=obj.id).values("id", "slug", "name", "banner_image")
 
     def get_products(self, obj):
-        return Material.objects.filter(category__parent_category_id=obj.id).values("id", "slug", "name", "main_image")
+        return Material.objects.filter(category__parent_category_id=obj.id).values(
+            "id", "slug", "name", "main_image", "category_id", "category__name"
+        )
 
 
-class MaterialSerializer(serializers.ModelSerializer):
+class MaterialDetailSerializer(serializers.ModelSerializer):
     images = serializers.SerializerMethodField()
 
     class Meta:
@@ -74,4 +77,12 @@ class VideoSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Video
+        fields = "__all__"
+
+
+class MediaSerializer(serializers.ModelSerializer):
+    category_name = serializers.ReadOnlyField(source="category.name")
+
+    class Meta:
+        model = Media
         fields = "__all__"

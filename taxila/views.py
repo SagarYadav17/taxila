@@ -1,5 +1,6 @@
 from django.utils.decorators import method_decorator
 from django.views.decorators.cache import cache_page
+from rest_framework.exceptions import NotFound
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -7,9 +8,10 @@ from taxila.serializers import (
     InspirationSerializer,
     KitchenItemSerializer,
     ParentMaterialDetailSerializer,
-    MaterialSerializer,
+    MaterialDetailSerializer,
     MetaDataSerializer,
     VideoSerializer,
+    MediaSerializer,
 )
 from taxila.models import (
     HomepageBanner,
@@ -19,6 +21,8 @@ from taxila.models import (
     KitchenItem,
     Material,
     MaterialCategory,
+    Media,
+    MediaCategory,
     MetaData,
     ParentCategory,
     Video,
@@ -60,22 +64,46 @@ class ParentMaterialDetailView(RetrieveAPIView):
         return super().dispatch(request, *args, **kwargs)
 
 
-class MaterialView(RetrieveAPIView):
-    serializer_class = MaterialSerializer
-    lookup_field = "id"
+class MaterialView(ListAPIView):
+    serializer_class = MaterialDetailSerializer
 
-    def get_queryset(self):
+    @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
+    def get(self, request):
         queryset = Material.objects.filter(
             is_active=True,
             category__is_active=True,
             vendor__is_active=True,
             category__parent_category__is_active=True,
         )
-        return queryset
+
+        category = self.request.query_params.get("category")
+        if category:
+            queryset = queryset.filter(category__name=category)
+
+        return Response(queryset.values("id", "slug", "main_image", "name", "category_id", "category__name"))
+
+
+class MaterialDetailView(APIView):
+    serializer_class = MaterialDetailSerializer
 
     @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
-    def dispatch(self, request, *args, **kwargs):
-        return super().dispatch(request, *args, **kwargs)
+    def get(self, request, query):
+        queryset = Material.objects.filter(
+            is_active=True,
+            category__is_active=True,
+            vendor__is_active=True,
+            category__parent_category__is_active=True,
+        )
+
+        try:
+            queryset = queryset.filter(id=query).first()
+        except ValueError:
+            queryset = queryset.filter(slug=query).first()
+
+        if not queryset:
+            raise NotFound("Material not found")
+
+        return Response(self.serializer_class(queryset).data)
 
 
 class KitchenView(ListAPIView):
@@ -202,6 +230,33 @@ class ProductSlugVerifyView(APIView):
     def get(self, request, slug):
         exists = Material.objects.filter(slug=slug).exists()
         return Response({"exists": exists})
+
+    @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
+
+
+class MediaCategoryView(APIView):
+    def get(self, request):
+        queryset = MediaCategory.objects.filter(is_active=True).values()
+        return Response(queryset)
+
+    @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
+
+
+class MediaView(ListAPIView):
+    serializer_class = MediaSerializer
+
+    def get_queryset(self):
+        queryset = Media.objects.filter(is_active=True, category__is_active=True)
+
+        category = self.request.query_params.get("category")
+        if category:
+            queryset = queryset.filter(category_id=category)
+
+        return queryset
 
     @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
     def dispatch(self, request, *args, **kwargs):

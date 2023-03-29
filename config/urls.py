@@ -8,14 +8,17 @@ from taxila.views import (
     InspirationView,
     KitchenCategoryView,
     KitchenView,
+    MediaCategoryView,
+    MediaView,
     ParentMaterialDetailView,
     MaterialCategoryView,
-    MaterialView,
+    MaterialDetailView,
     MetaDataView,
     ProductSlugVerifyView,
     VideoCategoryView,
     VideoView,
     InspirationCategoryView,
+    MaterialView,
 )
 
 admin.site.site_header = "Taxila Stone Administration"
@@ -30,13 +33,16 @@ urlpatterns = [
     path("inspiration-category/", InspirationCategoryView.as_view(), name="inspiration-category"),
     path("material-category/", MaterialCategoryView.as_view(), name="material-category"),
     path("video-category/", VideoCategoryView.as_view(), name="video-category"),
+    path("media-category/", MediaCategoryView.as_view(), name="media-category"),
     path("homepage/", HomepageAPIView.as_view(), name="homepage"),
     path("videos/", VideoView.as_view(), name="videos"),
+    path("media/", MediaView.as_view(), name="media"),
     path("inspiration/", InspirationView.as_view(), name="inspiration"),
     path("kitchen/", KitchenView.as_view(), name="kitchen"),
     path("meta-data/<str:slug>/", MetaDataView.as_view(), name="meta-data"),
     path("parent-material/<int:id>/", ParentMaterialDetailView.as_view(), name="material"),
-    path("material/<int:id>/", MaterialView.as_view(), name="material"),
+    path("material/<str:query>/", MaterialDetailView.as_view(), name="material"),
+    path("material/", MaterialView.as_view(), name="material"),
     path("slug-verify/<slug:slug>/", ProductSlugVerifyView.as_view(), name="slug-verify"),
 ]
 

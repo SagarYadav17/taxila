@@ -52,10 +52,10 @@ class ParentCategory(TimestampedModel):
 class MetaData(TimestampedModel):
     slug = models.SlugField(max_length=255, unique=True)
     title = models.CharField(max_length=255)
-    og_title = models.CharField(max_length=255, blank=True, null=True)
-    twitter_title = models.CharField(max_length=255, blank=True, null=True)
     meta_description = models.TextField(blank=True, null=True)
+    og_title = models.CharField(max_length=255, blank=True, null=True)
     og_description = models.TextField(blank=True, null=True)
+    twitter_title = models.CharField(max_length=255, blank=True, null=True)
     twitter_description = models.TextField(blank=True, null=True)
     script = models.JSONField(default=dict)
 

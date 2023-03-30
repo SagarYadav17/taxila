@@ -72,7 +72,6 @@ class MaterialView(ListAPIView):
         queryset = Material.objects.filter(
             is_active=True,
             category__is_active=True,
-            vendor__is_active=True,
             category__parent_category__is_active=True,
         )
 
@@ -91,7 +90,6 @@ class MaterialDetailView(APIView):
         queryset = Material.objects.filter(
             is_active=True,
             category__is_active=True,
-            vendor__is_active=True,
             category__parent_category__is_active=True,
         )
 
@@ -228,7 +226,13 @@ class BannerImagesView(APIView):
 
 class ProductSlugVerifyView(APIView):
     def get(self, request, slug):
-        exists = Material.objects.filter(slug=slug).exists()
+        exists = Material.objects.filter(
+            is_active=True,
+            category__is_active=True,
+            category__parent_category__is_active=True,
+            slug=slug,
+        ).exists()
+
         return Response({"exists": exists})
 
     @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))

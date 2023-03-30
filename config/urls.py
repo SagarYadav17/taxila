@@ -39,9 +39,9 @@ urlpatterns = [
     path("media/", MediaView.as_view(), name="media"),
     path("inspiration/", InspirationView.as_view(), name="inspiration"),
     path("kitchen/", KitchenView.as_view(), name="kitchen"),
-    path("meta-data/<str:slug>/", MetaDataView.as_view(), name="meta-data"),
-    path("parent-material/<int:id>/", ParentMaterialDetailView.as_view(), name="material"),
-    path("material/<str:query>/", MaterialDetailView.as_view(), name="material"),
+    path("meta-data/<slug:slug>/", MetaDataView.as_view(), name="meta-data"),
+    path("parent-material/<int:id>/", ParentMaterialDetailView.as_view(), name="parent-material"),
+    path("material/<str:query>/", MaterialDetailView.as_view(), name="material-detail"),
     path("material/", MaterialView.as_view(), name="material"),
     path("slug-verify/<slug:slug>/", ProductSlugVerifyView.as_view(), name="slug-verify"),
 ]

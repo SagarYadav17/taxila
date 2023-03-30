@@ -156,6 +156,23 @@ class KitchenItem(TimestampedModel):
     tall_unit = models.TextField(blank=True, null=True)
     design_solution = models.TextField(blank=True, null=True)
     other = models.TextField(blank=True, null=True)
+
+    wall_unit_with_grip_recessed = models.BooleanField(default=False)
+    wall_unit_with_handle = models.BooleanField(default=False)
+    tall_unit_with_grip_recessed = models.BooleanField(default=False)
+    tall_unit_with_handle = models.BooleanField(default=False)
+    modular_base_unit = models.BooleanField(default=False)
+    living_room_base_unit = models.BooleanField(default=False)
+    tall_corner_walk_pantry = models.BooleanField(default=False)
+    tall_unit_with_extended_door = models.BooleanField(default=False)
+    hole_tall_unit = models.BooleanField(default=False)
+    modular_wall_unit = models.BooleanField(default=False)
+    living_and_open_box_unit = models.BooleanField(default=False)
+    sliding_counter = models.BooleanField(default=False)
+    boiserie = models.BooleanField(default=False)
+    glass_unit = models.BooleanField(default=False)
+    custom_on_request = models.BooleanField(default=False)
+
     is_active = models.BooleanField(default=True)
 
     def __str__(self):

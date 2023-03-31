@@ -145,6 +145,23 @@ class MaterialDetailAPIViewTest(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
 
+class MaterialCategoryDetailAPIViewTest(APITestCase):
+    def setUp(self) -> None:
+        pc = ParentCategory.objects.get_or_create(name="some-name")[0]
+        MaterialCategory.objects.get_or_create(id=1, name="some-name", parent_category=pc)[0]
+        return super().setUp()
+
+    def test_get_success(self) -> None:
+        url = reverse("material-category-detail", kwargs={"id": 1})
+        response = self.client.get(url, format="json")
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+    def test_get_not_found(self) -> None:
+        url = reverse("material-category-detail", kwargs={"id": 2})
+        response = self.client.get(url, format="json")
+        self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
+
+
 class MaterialAPIViewTest(APITestCase):
     def test_get_success(self) -> None:
         url = reverse("material")

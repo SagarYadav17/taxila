@@ -14,6 +14,18 @@ from taxila.models import (
 )
 
 
+class MaterialCategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MaterialCategory
+        fields = "__all__"
+
+
+class MaterialShortDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Material
+        fields = ("id", "slug", "name", "main_image")
+
+
 class ParentMaterialDetailSerializer(serializers.ModelSerializer):
     sub_categories = serializers.SerializerMethodField()
     products = serializers.SerializerMethodField()
@@ -23,12 +35,24 @@ class ParentMaterialDetailSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
     def get_sub_categories(self, obj):
-        return MaterialCategory.objects.filter(parent_category_id=obj.id).values("id", "slug", "name", "banner_image")
+        queryset = MaterialCategory.objects.filter(parent_category_id=obj.id)
+        return MaterialCategorySerializer(queryset, many=True).data
 
     def get_products(self, obj):
-        return Material.objects.filter(category__parent_category_id=obj.id).values(
-            "id", "slug", "name", "main_image", "category_id", "category__name"
-        )
+        queryset = Material.objects.filter(category__parent_category_id=obj.id)
+        return MaterialShortDetailSerializer(queryset, many=True).data
+
+
+class MaterialCategoryDetailSerializer(serializers.ModelSerializer):
+    products = serializers.SerializerMethodField()
+
+    class Meta:
+        model = MaterialCategory
+        fields = "__all__"
+
+    def get_products(self, obj):
+        queryset = Material.objects.filter(category_id=obj.id)
+        return MaterialShortDetailSerializer(queryset, many=True).data
 
 
 class MaterialDetailSerializer(serializers.ModelSerializer):

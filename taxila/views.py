@@ -7,6 +7,7 @@ from rest_framework.response import Response
 from taxila.serializers import (
     InspirationSerializer,
     KitchenItemSerializer,
+    MaterialCategoryDetailSerializer,
     ParentMaterialDetailSerializer,
     MaterialDetailSerializer,
     MetaDataSerializer,
@@ -57,6 +58,16 @@ class HomepageAPIView(APIView):
 class ParentMaterialDetailView(RetrieveAPIView):
     serializer_class = ParentMaterialDetailSerializer
     queryset = ParentCategory.objects.filter(is_active=True)
+    lookup_field = "id"
+
+    @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
+
+
+class MaterialCategoryDetailView(RetrieveAPIView):
+    serializer_class = MaterialCategoryDetailSerializer
+    queryset = MaterialCategory.objects.filter(is_active=True)
     lookup_field = "id"
 
     @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))

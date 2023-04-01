@@ -65,10 +65,20 @@ class ParentMaterialDetailView(RetrieveAPIView):
         return super().dispatch(request, *args, **kwargs)
 
 
-class MaterialCategoryDetailView(RetrieveAPIView):
+class MaterialCategoryDetailView(APIView):
     serializer_class = MaterialCategoryDetailSerializer
-    queryset = MaterialCategory.objects.filter(is_active=True)
-    lookup_field = "id"
+
+    def get(self, request, query):
+        queryset = MaterialCategory.objects.filter(is_active=True)
+        try:
+            queryset = queryset.filter(id=query).first()
+        except ValueError:
+            queryset = queryset.filter(slug=query).first()
+
+        if not queryset:
+            raise NotFound("Material not found")
+
+        return Response(self.serializer_class(queryset).data)
 
     @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
     def dispatch(self, request, *args, **kwargs):

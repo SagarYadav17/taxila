@@ -59,6 +59,8 @@ class MaterialCategoryDetailSerializer(serializers.ModelSerializer):
 
 class MaterialDetailSerializer(serializers.ModelSerializer):
     images = serializers.SerializerMethodField()
+    catergory_name = serializers.ReadOnlyField(source="category.name")
+    parent_category_name = serializers.ReadOnlyField(source="category.parent_category.name")
 
     class Meta:
         model = Material

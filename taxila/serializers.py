@@ -21,9 +21,11 @@ class MaterialCategorySerializer(serializers.ModelSerializer):
 
 
 class MaterialShortDetailSerializer(serializers.ModelSerializer):
+    category__name = serializers.ReadOnlyField(source="category.name")
+
     class Meta:
         model = Material
-        fields = ("id", "slug", "name", "main_image")
+        fields = ("id", "slug", "name", "main_image", "category_id", "category__name")
 
 
 class ParentMaterialDetailSerializer(serializers.ModelSerializer):

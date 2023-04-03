@@ -208,7 +208,7 @@ class KitchenCategoryView(APIView):
 
 class MaterialCategoryView(APIView):
     def get(self, request):
-        queryset = MaterialCategory.objects.filter(is_active=True).values()
+        queryset = MaterialCategory.objects.filter().values()
         return Response(queryset)
 
     @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))

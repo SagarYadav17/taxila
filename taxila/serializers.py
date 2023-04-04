@@ -47,6 +47,7 @@ class ParentMaterialDetailSerializer(serializers.ModelSerializer):
 
 class MaterialCategoryDetailSerializer(serializers.ModelSerializer):
     products = serializers.SerializerMethodField()
+    parent_category_name = serializers.ReadOnlyField(source="parent_category.name")
 
     class Meta:
         model = MaterialCategory

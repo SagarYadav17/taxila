@@ -31,6 +31,7 @@ class MaterialShortDetailSerializer(serializers.ModelSerializer):
 class ParentMaterialDetailSerializer(serializers.ModelSerializer):
     sub_categories = serializers.SerializerMethodField()
     products = serializers.SerializerMethodField()
+    meta_data = serializers.SerializerMethodField()
 
     class Meta:
         model = ParentCategory
@@ -43,6 +44,13 @@ class ParentMaterialDetailSerializer(serializers.ModelSerializer):
     def get_products(self, obj):
         queryset = Material.objects.filter(category__parent_category_id=obj.id)
         return MaterialShortDetailSerializer(queryset, many=True).data
+
+    def get_meta_data(self, obj):
+        try:
+            queryset = MetaData.objects.get(slug=obj.slug)
+            return MetaDataSerializer(queryset).data
+        except MetaData.DoesNotExist:
+            return None
 
 
 class MaterialCategoryDetailSerializer(serializers.ModelSerializer):
@@ -62,6 +70,7 @@ class MaterialDetailSerializer(serializers.ModelSerializer):
     images = serializers.SerializerMethodField()
     catergory_name = serializers.ReadOnlyField(source="category.name")
     parent_category_name = serializers.ReadOnlyField(source="category.parent_category.name")
+    meta_data = serializers.SerializerMethodField()
 
     class Meta:
         model = Material
@@ -69,6 +78,13 @@ class MaterialDetailSerializer(serializers.ModelSerializer):
 
     def get_images(self, obj):
         return [item.image.url for item in MaterialImage.objects.filter(material_id=obj.id)]
+
+    def get_meta_data(self, obj):
+        try:
+            queryset = MetaData.objects.get(slug=obj.slug)
+            return MetaDataSerializer(queryset).data
+        except MetaData.DoesNotExist:
+            return None
 
 
 class KitchenItemSerializer(serializers.ModelSerializer):

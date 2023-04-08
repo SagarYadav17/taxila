@@ -141,7 +141,7 @@ class MaterialImage(TimestampedModel):
     image = models.FileField(upload_to=upload_to_path)
 
     def __str__(self) -> str:
-        return "%s - %s" % (self.item.name, self.id)
+        return "%s - %s" % (self.material, self.id)
 
 
 class KitchenItem(TimestampedModel):

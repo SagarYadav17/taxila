@@ -149,20 +149,20 @@
         "fields": {
             "ranking": 0,
             "created_at": "2023-03-18T18:42:52.417Z",
-            "updated_at": "2023-03-29T15:48:36.502Z",
+            "updated_at": "2023-04-04T07:41:17.674Z",
             "parent_category": 1,
             "name": "Granite",
             "banner_image": "",
             "sub_image": "",
             "slug": "granite",
             "detail": "",
-            "feature_chip": 0,
-            "feature_heat": 0,
-            "feature_stain": 0,
-            "feature_scratch": 0,
-            "feature_water": 0,
-            "feature_frost": 0,
-            "pros": "",
+            "feature_chip": 3,
+            "feature_heat": 3,
+            "feature_stain": 2,
+            "feature_scratch": 3,
+            "feature_water": 3,
+            "feature_frost": 3,
+            "pros": "Hard surface, easy maintenance",
             "is_active": true
         }
     },
@@ -7160,8 +7160,8 @@
             "slug": "terra",
             "category": 1,
             "name": "terra",
-            "description_en": "kitchen project terra. the earth, with its waters, forests and mountains, is extraordinarily beautiful in its being, in its naked and silent presence. contrary to everyday artifacts where use and function dominate, the earth is what it is, regardless of who we are, what we do and the functions we give to it. in thinking about the terra kitchen i imagined an object where usefulness and function manifest themselves with the same force of nature: solid, timeless, abstract. i expressed the immense value of the earth with a strict geometrical shape and natural materials - stone and wood. cooking on a stone worktop dated million years makes me feel simultaneously reverent and fortunate. the juxtaposition at 45░ between the worktops and fronts, together with the small vertical and horizontal profiles, determine a surface characterized by the presence of regular and cadenced geometries. the tall units are similarly identified by the same module. the new era of terra is molten bronze. a creation between art and technology, able to advance natural elements by human ingenuity and recreating a perfect balance between provocation and simplicity. ô pure strength ô in perfect equilibrium between the force of nature and human strength, an element of weight\nand of artö. claudio silvestrin",
-            "description_it": "progetto cucina terra. la terra, con le sue acque, le sue foreste, le sue montagne, Φ straordinariamente bella nel suo essere, nella sua presenza nuda e silenziosa. contrariamente agli artefatti quotidiani in cui lÆuso e la funzione sono predominanti, la terra Φ ci≥ che Φ, indipendentemente da chi siamo, da cosa facciamo e dalle funzioni che le diamo. nel pensare alla cucina terra ho immaginato un oggetto che, per quanto utile e funzionale si manifesti con la stessa forza della natura: solida, atemporale, astratta. ho espresso lÆimmenso valore della terra con una forma dalla geometria rigorosa e dai materiali naturali - pietra e legno. cucinare su un piano di pietra datato milioni di anni mi fa sentire contemporaneamente reverente e fortunato. lÆaccostamento a 45░ tra il piano di lavoro ed i frontali, unitamente alle piccole gole verticali ed orizzontali, determinano una superficie caratterizzata dalla presenza di geometrie regolari e cadenzate. anche le colonne sono contraddistinte dallo stesso modulo. la nuova era di terra Φ il bronzo fuso. opera in bilico tra arte e tecnologia, in grado di evolvere gli elementi naturali con lÆingegno dellÆuomo ricreando un perfetto equilibrio tra provocazione e semplicitα. ôuna forza pura, in perfetto equilibrio tra forza della natura e forza umana, un elemento di peso e di arteö. claudio silvestrin",
+            "description_en": "kitchen project terra. the earth, with its waters, forests and mountains, is extraordinarily beautiful in its being, in its naked and silent presence. contrary to everyday artifacts where use and function dominate, the earth is what it is, regardless of who we are, what we do and the functions we give to it. in thinking about the terra kitchen i imagined an object where usefulness and function manifest themselves with the same force of nature: solid, timeless, abstract. i expressed the immense value of the earth with a strict geometrical shape and natural materials - stone and wood. cooking on a stone worktop dated million years makes me feel simultaneously reverent and fortunate. the juxtaposition at 45° between the worktops and fronts, together with the small vertical and horizontal profiles, determine a surface characterized by the presence of regular and cadenced geometries. the tall units are similarly identified by the same module. the new era of terra is molten bronze. a creation between art and technology, able to advance natural elements by human ingenuity and recreating a perfect balance between provocation and simplicity. “ pure strength “ in perfect equilibrium between the force of nature and human strength, an element of weight\nand of art”. claudio silvestrin",
+            "description_it": "progetto cucina terra. la terra, con le sue acque, le sue foreste, le sue montagne, è straordinariamente bella nel suo essere, nella sua presenza nuda e silenziosa. contrariamente agli artefatti quotidiani in cui l’uso e la funzione sono predominanti, la terra è ciò che è, indipendentemente da chi siamo, da cosa facciamo e dalle funzioni che le diamo. nel pensare alla cucina terra ho immaginato un oggetto che, per quanto utile e funzionale si manifesti con la stessa forza della natura: solida, atemporale, astratta. ho espresso l’immenso valore della terra con una forma dalla geometria rigorosa e dai materiali naturali - pietra e legno. cucinare su un piano di pietra datato milioni di anni mi fa sentire contemporaneamente reverente e fortunato. l’accostamento a 45° tra il piano di lavoro ed i frontali, unitamente alle piccole gole verticali ed orizzontali, determinano una superficie caratterizzata dalla presenza di geometrie regolari e cadenzate. anche le colonne sono contraddistinte dallo stesso modulo. la nuova era di terra è il bronzo fuso. opera in bilico tra arte e tecnologia, in grado di evolvere gli elementi naturali con l’ingegno dell’uomo ricreando un perfetto equilibrio tra provocazione e semplicità. “una forza pura, in perfetto equilibrio tra forza della natura e forza umana, un elemento di peso e di arte”. claudio silvestrin",
             "base_unit": null,
             "wall_unit": null,
             "tall_unit": null,
@@ -7196,8 +7196,8 @@
             "slug": "seta",
             "category": 1,
             "name": "seta",
-            "description_en": "glass and precious natural fabric are the ingredients that characterize the shape of this kitchen, signed alberto minotti. the doors, polished to seem almost incorporeal, are created by the aggregation of glass, silk and metal, forming a luxurious, refined linear and yet minimal result. the technology used to make this kitchen is very high and manages to combine the power and timelessness of the materials with the ingenuity of man, his creativity and the most innovative techniques. characteristic of minottiÆs design, the stone is presented differently. the work top is divided in the same way as the bases and each piece follow one another at ninety degrees from the previous one. this system emphasizes the joints of the worktop to the advantage of an aesthetic game of intertwining with the goal of lengthening and replicating them infinitely, thus deceiving the dimensional constraint of the stone. the exchange of lines also creates a design parallelism with the weaving of the fabric. and again, the breaks in the worktop make the columns disappear aesthetically with appliances that emerge automatically from the work surface when needed, but hide again after use.",
-            "description_it": "vetro e prezioso tessuto naturale sono gli ingredienti che caratterizzano la forma di questa cucina ideata da alberto minotti. le ante, lucide da sembrare quasi incorporee, sono create dallÆaggregazione di vetro, seta e metallo portando un risultato, lussuoso, ricercato eppure lineare e minimal al tempo stesso. la tecnologia utilizzata per realizzare questa cucina Φ altissima e riesce a unire la potenza e lÆatemporalitα dei materiali allÆingegno dellÆuomo, alla sua creativitα e alle sue tecniche pi∙ innovative. caratteristica del design la pietra presentata in modo diverso, il piano lavoro Φ diviso come le basi sotto proposte e per ogni porzione di piano lavoro, ne segue unÆaltra orientata di novanta gradi dalla precedete. questo sistema va ad enfatizzare la giunzione del piano a vantaggio di un gioco estetico di intrecci atti a rendere infinita la loro estensione nella lunghezza della cucina evitando il vincolo dimensionale della pietra. uno scambio di linee che crea un parallelismo progettuale con gli intrecci del tessuto. le rotture del piano rendono invisibile nellÆestetica la proposta delle colonne con gli elettrodomestici che emergono automaticamente dal piano lavoro quando servono, salvo poi ritornare nascoste una volta terminato il loro uso.",
+            "description_en": "glass and precious natural fabric are the ingredients that characterize the shape of this kitchen, signed alberto minotti. the doors, polished to seem almost incorporeal, are created by the aggregation of glass, silk and metal, forming a luxurious, refined linear and yet minimal result. the technology used to make this kitchen is very high and manages to combine the power and timelessness of the materials with the ingenuity of man, his creativity and the most innovative techniques. characteristic of minotti’s design, the stone is presented differently. the work top is divided in the same way as the bases and each piece follow one another at ninety degrees from the previous one. this system emphasizes the joints of the worktop to the advantage of an aesthetic game of intertwining with the goal of lengthening and replicating them infinitely, thus deceiving the dimensional constraint of the stone. the exchange of lines also creates a design parallelism with the weaving of the fabric. and again, the breaks in the worktop make the columns disappear aesthetically with appliances that emerge automatically from the work surface when needed, but hide again after use.",
+            "description_it": "vetro e prezioso tessuto naturale sono gli ingredienti che caratterizzano la forma di questa cucina ideata da alberto minotti. le ante, lucide da sembrare quasi incorporee, sono create dall’aggregazione di vetro, seta e metallo portando un risultato, lussuoso, ricercato eppure lineare e minimal al tempo stesso. la tecnologia utilizzata per realizzare questa cucina è altissima e riesce a unire la potenza e l’atemporalità dei materiali all’ingegno dell’uomo, alla sua creatività e alle sue tecniche più innovative. caratteristica del design la pietra presentata in modo diverso, il piano lavoro è diviso come le basi sotto proposte e per ogni porzione di piano lavoro, ne segue un’altra orientata di novanta gradi dalla precedete. questo sistema va ad enfatizzare la giunzione del piano a vantaggio di un gioco estetico di intrecci atti a rendere infinita la loro estensione nella lunghezza della cucina evitando il vincolo dimensionale della pietra. uno scambio di linee che crea un parallelismo progettuale con gli intrecci del tessuto. le rotture del piano rendono invisibile nell’estetica la proposta delle colonne con gli elettrodomestici che emergono automaticamente dal piano lavoro quando servono, salvo poi ritornare nascoste una volta terminato il loro uso.",
             "base_unit": null,
             "wall_unit": null,
             "tall_unit": null,
@@ -7233,7 +7233,7 @@
             "category": 1,
             "name": "anima",
             "description_en": "the block kitchen. each block is a cube with its own function. anima is proposed with exclusive details in perfect harmony with the stone, which becomes the most suitable material for a kitchen made with a strong tangible spirit. the joints of the worktop, a congenital and essential detail of all the large surfaces created with natural materials, represents an obstacle to visual continuity. to eliminate this sign the kitchen is in detached blocks. every single element, cubic, has a different and autonomous function: cooking, preparation and washing. the most significant technical advancement of anima is its platform on which the blocks are positioned. moved back and hidden, it is an extremely functional structure as it includes all the systems adding to the kitchen the ergonomics of a plinth.",
-            "description_it": "la cucina a blocchi. cubico nella forma ogni blocco ha la sua funzione. anima si propone con dettagli esclusivi in perfetta armonia alla pietra, che diventa il materiale pi∙ adatto per una cucina fatta di un forte spirito tangibile. la giunzione del piano di lavoro, dettaglio congenito e imprescindibile di tutte le superfici ampie realizzate con materiali naturali, rappresenta un ostacolo alla continuitα visiva. per cancellare questo segno la cucina Φ in blocchi staccati. ogni singolo elemento, cubico, ha una funzione diversa e autonoma: cottura, preparazione e lavaggio. lÆintroduzione tecnica pi∙ significativa di anima Φ rappresentata dalla pedana sulla quale vengono posizionati i blocchi. arretrata e nascosta Φ una struttura estremamente funzionale poichΘ racchiude tutte le impiantistiche aggiungendo alla cucina lÆergonomia di uno zoccolo.",
+            "description_it": "la cucina a blocchi. cubico nella forma ogni blocco ha la sua funzione. anima si propone con dettagli esclusivi in perfetta armonia alla pietra, che diventa il materiale più adatto per una cucina fatta di un forte spirito tangibile. la giunzione del piano di lavoro, dettaglio congenito e imprescindibile di tutte le superfici ampie realizzate con materiali naturali, rappresenta un ostacolo alla continuità visiva. per cancellare questo segno la cucina è in blocchi staccati. ogni singolo elemento, cubico, ha una funzione diversa e autonoma: cottura, preparazione e lavaggio. l’introduzione tecnica più significativa di anima è rappresentata dalla pedana sulla quale vengono posizionati i blocchi. arretrata e nascosta è una struttura estremamente funzionale poiché racchiude tutte le impiantistiche aggiungendo alla cucina l’ergonomia di uno zoccolo.",
             "base_unit": null,
             "wall_unit": null,
             "tall_unit": null,
@@ -7268,8 +7268,8 @@
             "slug": "gandhara",
             "category": 1,
             "name": "gandhara",
-            "description_en": "itÆs magic. playing with the angular degrees of vertical and horizontal surfaces, we managed to make the worktop disappear. itÆs there but can not be seen. this alchemy is made possible by the perfect 45 ░ cut between the doors and the top: the two elements fit together, camouflaging the thicknesses and giving lightness to the whole kitchen unit. by subtracting the worktop we have once again married and realized the minimalist spirit that distinguishes our every evolution. gandhara is characterized by grooves with horizontal lines that emphasize the length of the kitchen lengthening the point of view. the worktop is presented with 45 ░ edges allowing a clean and continuous joint with the doors, also with an identical cut. this is our first creation in which the worktop and the fronts of the baskets match to the millimetre. a harmony of balanced forms that, we believe, is able to express its potential in dark tones.",
-            "description_it": "Φ una magia. giocando con i gradi angolari delle superfici verticali e orizzontali, siamo riusciti a far sparire il piano. che cÆΦ ma non si vede. lÆalchimia Φ resa possibile dal perfetto taglio a 45░ tra le ante e il piano: i due elementi combaciano, mimetizzando gli spessori e regalando leggerezza a tutto il blocco cucina. sottraendo il piano abbiamo ancora una volta sposato e concretizzato quello spirito minimalista che contraddistingue ogni nostra evoluzione. gandhara Φ caratterizzata da gole con linee orizzontali che enfatizzano la lunghezza della cucina allungando il punto di vista. il piano di lavoro si presenta con i bordi a 45░ permettendo una giunzione pulita e continua con le ante, anchÆesse con taglio identico. Si tratta della prima nostra creazione in cui il piano di lavoro e i frontali dei cestoni combaciano al millimetro. unÆarmonia di forme in equilibrio che, riteniamo, Φ in grado di esprimere il proprio potenziale nei toni scuri.",
+            "description_en": "it’s magic. playing with the angular degrees of vertical and horizontal surfaces, we managed to make the worktop disappear. it’s there but can not be seen. this alchemy is made possible by the perfect 45 ° cut between the doors and the top: the two elements fit together, camouflaging the thicknesses and giving lightness to the whole kitchen unit. by subtracting the worktop we have once again married and realized the minimalist spirit that distinguishes our every evolution. gandhara is characterized by grooves with horizontal lines that emphasize the length of the kitchen lengthening the point of view. the worktop is presented with 45 ° edges allowing a clean and continuous joint with the doors, also with an identical cut. this is our first creation in which the worktop and the fronts of the baskets match to the millimetre. a harmony of balanced forms that, we believe, is able to express its potential in dark tones.",
+            "description_it": "è una magia. giocando con i gradi angolari delle superfici verticali e orizzontali, siamo riusciti a far sparire il piano. che c’è ma non si vede. l’alchimia è resa possibile dal perfetto taglio a 45° tra le ante e il piano: i due elementi combaciano, mimetizzando gli spessori e regalando leggerezza a tutto il blocco cucina. sottraendo il piano abbiamo ancora una volta sposato e concretizzato quello spirito minimalista che contraddistingue ogni nostra evoluzione. gandhara è caratterizzata da gole con linee orizzontali che enfatizzano la lunghezza della cucina allungando il punto di vista. il piano di lavoro si presenta con i bordi a 45° permettendo una giunzione pulita e continua con le ante, anch’esse con taglio identico. Si tratta della prima nostra creazione in cui il piano di lavoro e i frontali dei cestoni combaciano al millimetro. un’armonia di forme in equilibrio che, riteniamo, è in grado di esprimere il proprio potenziale nei toni scuri.",
             "base_unit": null,
             "wall_unit": null,
             "tall_unit": null,
@@ -7305,7 +7305,7 @@
             "category": 1,
             "name": "hanami",
             "description_en": "the lines of hanami originate in japan. in this far-eastern land, the wall is shoji: without doors or windows, it contains everything in a single design. lightweight in paper and wood, it filters the light in a natural way almost like an opening, a window. and again, its wooden slats mimic the function of the doors becoming opening handles and lead to another room or the outside. like this linear game of natural materials and geometric balances, hanami uses the set of wooden slats as handles, creating a simultaneous interplay of shadow and light that hide the joints of the furniture piece. wood as its maximum expression is proposed in a single-material key on both the doors and the handles and adapts to various solutions of openings: from the whole door, to the double basket and to the drawers. in all cases the signs disappear before the eye in a specific and ordered compositional scheme of strips. an exciting collective made of individual elements that become one to the eye. combined with stone tops, it reproduces the japanese essence of cherry blossoms.",
-            "description_it": "le linee di hanami prendono linfa vitale dal giappone. siamo abituati nel vedere una parete con porte e finestre, in giappone la parete Φ shoji e racchiude tutto in un unico disegno. leggerissime in carta e legno, rende possibile il passaggio della luce, come una finestra, grazie alla carta e invece i listelli in legno diventano maniglie per aprire, come porte, le pareti verso unÆaltra stanza oppure verso un esterno. di forte ispirazione hanami sfrutta come la parete shoji, lÆinsieme di listelli in legno come maniglie. i listelli creano dei giochi di ombra e luce atti nel nascondere le fughe del mobile e il legno come suo massima espressione viene proposto in chiave monomaterica sia sullÆanta che nella maniglia che si adatta a varie soluzioni di aperture come lÆanta intera, doppio cestone e cassetti, in tutti i casi i segni spariscono allÆocchio in uno specifico e ordinato schema compositivo di listelli. un collettivo emozionante fatto di elementi singoli che diventano un tuttÆuno agli æocchi. lÆessenza giapponese dei ciliegi in fiore.",
+            "description_it": "le linee di hanami prendono linfa vitale dal giappone. siamo abituati nel vedere una parete con porte e finestre, in giappone la parete è shoji e racchiude tutto in un unico disegno. leggerissime in carta e legno, rende possibile il passaggio della luce, come una finestra, grazie alla carta e invece i listelli in legno diventano maniglie per aprire, come porte, le pareti verso un’altra stanza oppure verso un esterno. di forte ispirazione hanami sfrutta come la parete shoji, l’insieme di listelli in legno come maniglie. i listelli creano dei giochi di ombra e luce atti nel nascondere le fughe del mobile e il legno come suo massima espressione viene proposto in chiave monomaterica sia sull’anta che nella maniglia che si adatta a varie soluzioni di aperture come l’anta intera, doppio cestone e cassetti, in tutti i casi i segni spariscono all’occhio in uno specifico e ordinato schema compositivo di listelli. un collettivo emozionante fatto di elementi singoli che diventano un tutt’uno agli ‘occhi. l’essenza giapponese dei ciliegi in fiore.",
             "base_unit": null,
             "wall_unit": null,
             "tall_unit": null,
@@ -7340,8 +7340,8 @@
             "slug": "atelier",
             "category": 1,
             "name": "atelier",
-            "description_en": "probably our most versatile offering, it preserves the strong and timeless values of rock. with atelier, free expression is given to the naturalness of the element that rebels against human technique and expresses itself in all its raw and genuine form. developed horizontally, it exudes craftsmanship thanks to the split edge.  aterally, the worktop is not clean cut but chiseled: a particular that makes this composition an authentic emotion. the split edge is therefore true and pure empathy that we have used also on counters of other models. atelier is the quintessential kitchen design thanks to the many variations of available finishes and composition. the worktop is the protagonist and can be customized: as well as split, it can have a straight or a ribbed 60 ░ edge to enhance its cleanliness and lightness.",
-            "description_it": "probabilmente la pi∙ versatile tra le nostre produzioni, conserva integro il sapore forte e senza tempo della roccia. in atelier, viene lasciata libera espressione alla naturalitα dellÆelemento che si ribella alla  ecnica umana e si mostra in tutta la sua forma, grezza e genuina. sviluppata in orizzontale, trasuda artigianalitα grazie alla costa a spacco. lateralmente, il piano non Φ tagliato di netto ma scalpellato: una  articolaritα che rende questa composizione unÆautentica emozione. la costa a spacco Φ dunque una vera e pura empatia che abbiamo traslato anche su banconi di altri modelli. atelier Φ la cucina progettabile  er antonomasia grazie alle molteplici varianti di finiture e di composizione disponibili. il piano di lavoro Φ protagonista e pu≥ essere personalizzabile: oltre che a spacco, pu≥ avere la costa retta o bistellata a  0░ per esaltare la pulizia e la leggerezza del piano stesso.",
+            "description_en": "probably our most versatile offering, it preserves the strong and timeless values of rock. with atelier, free expression is given to the naturalness of the element that rebels against human technique and expresses itself in all its raw and genuine form. developed horizontally, it exudes craftsmanship thanks to the split edge.  aterally, the worktop is not clean cut but chiseled: a particular that makes this composition an authentic emotion. the split edge is therefore true and pure empathy that we have used also on counters of other models. atelier is the quintessential kitchen design thanks to the many variations of available finishes and composition. the worktop is the protagonist and can be customized: as well as split, it can have a straight or a ribbed 60 ° edge to enhance its cleanliness and lightness.",
+            "description_it": "probabilmente la più versatile tra le nostre produzioni, conserva integro il sapore forte e senza tempo della roccia. in atelier, viene lasciata libera espressione alla naturalità dell’elemento che si ribella alla  ecnica umana e si mostra in tutta la sua forma, grezza e genuina. sviluppata in orizzontale, trasuda artigianalità grazie alla costa a spacco. lateralmente, il piano non è tagliato di netto ma scalpellato: una  articolarità che rende questa composizione un’autentica emozione. la costa a spacco è dunque una vera e pura empatia che abbiamo traslato anche su banconi di altri modelli. atelier è la cucina progettabile  er antonomasia grazie alle molteplici varianti di finiture e di composizione disponibili. il piano di lavoro è protagonista e può essere personalizzabile: oltre che a spacco, può avere la costa retta o bistellata a  0° per esaltare la pulizia e la leggerezza del piano stesso.",
             "base_unit": null,
             "wall_unit": null,
             "tall_unit": null,
@@ -7376,8 +7376,8 @@
             "slug": "inca",
             "category": 1,
             "name": "inca",
-            "description_en": "ôlet no man ignorant of geometry enter hereö: it is this sentence of the greek philosopher plato which has inspired us. respecting the geometric purity of the essential forms, we have raised the lines on the pedestal that run upwards from the bottom, pushing the principle of subtraction to the extreme. the natural elements match and complement each other in an exquisite example of a refined, simple and elegant combination. inca presents itself with a vertical rhythm given by the channels that punctuate the form of the composition. the thickness of the worktop blots out the thickness of the doors by drawing a single perimeter line that unites, without visual distraction, different materials and finishes. the verticality remains the protagonist and the 45 ░ door edges and worktop uniquely characterize the kitchen volume identity. the associated columns have the same vertical channels.",
-            "description_it": "ônon entri chi non sa di geometriaö: Φ questa frase del filosofo greco platone ad averci ispirato. rispettando la purezza geometrica delle forme essenziali, abbiamo fatto salire sul piedistallo le linee che dal basso corrono verso lÆalto, spingendo allÆestremo il principio della sottrazione. gli elementi naturali combaciano e si completano tra loro ed un esempio eccellente ne Φ lÆincontro raffinato, semplice ed legante. inca si presenta con un ritmo verticale dato dalle gole che scandiscono il modulo della composizione. lo spessore del piano di lavoro annega nello spessore delle ante disegnando unÆunica linea perimetrale che unisce, senza alcuna distrazione visiva, materiali e finiture diverse. rimangono protagoniste la verticalitα e le lavorazioni a 45░ offrendo alla cucina unÆidentitα di volume unico. le colonne ad essa abbinate presentano le stesse gole verticali.",
+            "description_en": "“let no man ignorant of geometry enter here”: it is this sentence of the greek philosopher plato which has inspired us. respecting the geometric purity of the essential forms, we have raised the lines on the pedestal that run upwards from the bottom, pushing the principle of subtraction to the extreme. the natural elements match and complement each other in an exquisite example of a refined, simple and elegant combination. inca presents itself with a vertical rhythm given by the channels that punctuate the form of the composition. the thickness of the worktop blots out the thickness of the doors by drawing a single perimeter line that unites, without visual distraction, different materials and finishes. the verticality remains the protagonist and the 45 ° door edges and worktop uniquely characterize the kitchen volume identity. the associated columns have the same vertical channels.",
+            "description_it": "“non entri chi non sa di geometria”: è questa frase del filosofo greco platone ad averci ispirato. rispettando la purezza geometrica delle forme essenziali, abbiamo fatto salire sul piedistallo le linee che dal basso corrono verso l’alto, spingendo all’estremo il principio della sottrazione. gli elementi naturali combaciano e si completano tra loro ed un esempio eccellente ne è l’incontro raffinato, semplice ed legante. inca si presenta con un ritmo verticale dato dalle gole che scandiscono il modulo della composizione. lo spessore del piano di lavoro annega nello spessore delle ante disegnando un’unica linea perimetrale che unisce, senza alcuna distrazione visiva, materiali e finiture diverse. rimangono protagoniste la verticalità e le lavorazioni a 45° offrendo alla cucina un’identità di volume unico. le colonne ad essa abbinate presentano le stesse gole verticali.",
             "base_unit": null,
             "wall_unit": null,
             "tall_unit": null,
@@ -7413,7 +7413,7 @@
             "category": 1,
             "name": "maya",
             "description_en": "it is suspended and seems to fly. or its opposite: it is firmly anchored to the ground, like a natural extension of the floor. moreover, it combines both dimensions proposed in double depth. in aluminum, as light as it is resistant, it actually hides a heart of stone and three centimeter high solid worktop: a major thickness that we have nullified and hidden in only seven millimeters. in this way the protrusion of the upper edge of the composition is infinitesimal, containing the top and becoming functional when opening and closing the modules with no handles or channels. a kitchen with sculptural volumes, maya can be composed of single bases, resting on the floor or suspended, and double-depth bases.",
-            "description_it": "Φ sospesa e sembra volare. o il suo contrario: Φ saldamente ancorata a terra, come un naturale prolungamento del pavimento. di pi∙, coniuga lÆuna e lÆaltra dimensione, proponendosi in doppia profonditα. in alluminio, tanto leggero quanto resistente, nasconde in realtα un cuore di pietra e un piano solido, alto tre centimetri. uno spessore importante che abbiamo annullato e nascosto in soli sette millimetri. cos∞ infinitesimale Φ infatti la parte di anta che sporge dal bordo superiore della composizione, contenendo il piano e diventando funzionale allÆapertura e chiusura dei moduli su cui non ci sono maniglie o gole. cucina dai volumi scultorei, maya pu≥ essere composta da basi singole, in appoggio a terra oppure sospese, e da basi a doppia profonditα.",
+            "description_it": "è sospesa e sembra volare. o il suo contrario: è saldamente ancorata a terra, come un naturale prolungamento del pavimento. di più, coniuga l’una e l’altra dimensione, proponendosi in doppia profondità. in alluminio, tanto leggero quanto resistente, nasconde in realtà un cuore di pietra e un piano solido, alto tre centimetri. uno spessore importante che abbiamo annullato e nascosto in soli sette millimetri. così infinitesimale è infatti la parte di anta che sporge dal bordo superiore della composizione, contenendo il piano e diventando funzionale all’apertura e chiusura dei moduli su cui non ci sono maniglie o gole. cucina dai volumi scultorei, maya può essere composta da basi singole, in appoggio a terra oppure sospese, e da basi a doppia profondità.",
             "base_unit": null,
             "wall_unit": null,
             "tall_unit": null,
@@ -7449,7 +7449,7 @@
             "category": 1,
             "name": "incline",
             "description_en": "the stone and the natural materials with which we create all our compositions resist time and its elements for millennia, and continue to do so even when the kitchen breaks the boundaries of the house to get out and colonize exterior spaces with a dual function: embellish the outdoor and barbecue, grill, cook. in incline, which perfectly marries the principles of minimalism and visual silence, we meet many peculiarities all contained in an inclined monomaterial monoblock. a perfect angle allows the use of each side to form a composition that, without elements of discontinuity, presents itself as a unique and groundbreaking piece, the absolute protagonist. much more than a kitchen island, incline looks like a rock in the gardens. an outdoor monoblock kitchen, it has a core in austenitic stainless steel, gas barbecue with sliding stone cover. a stone sink with hidden drain and the water source straight from a hole in the stone. at the end, two austenitic stainless steel baskets open by means of ball guides, also made of steel.",
-            "description_it": "la pietra e i materiali naturali con cui creiamo tutte le nostre composizioni resistono al tempo e ai suoi elementi da millenni. e continuano a farlo anche quando la cucina rompe i confini della casa per uscire e colonizzare gli spazi esterni con una duplice funzione: impreziosire lÆoutdoor e cuocere, grigliare, cucinare. in incline, che sposa alla perfezione i principi del minimalismo e del silenzio visivo, si incontrano molte peculiaritα tutte racchiuse in un monoblocco, monomaterico inclinato. una perfetta angolatura permette la fruizione di ciascun lato per formare una composizione che, senza elementi di discontinuitα, si propone essa stessa come elemento unico e di rottura, protagonista assoluta. molto pi∙ di unÆisola cucina, incline si presenta come uno scoglio nel verde di casa. cucina monoblocco da esterno ha unÆanima in acciaio inossidabile austenitico, barbecue a gas con coperchio scorrevole in pietra. vasca in pietra con piletta nascosta dove lÆacqua fuoriesce da un foro praticato direttamente nella pietra. in testa, due cestoni in acciaio inossidabile autenitico si aprono mediante guide a sfere, anchÆesse dÆacciaio.",
+            "description_it": "la pietra e i materiali naturali con cui creiamo tutte le nostre composizioni resistono al tempo e ai suoi elementi da millenni. e continuano a farlo anche quando la cucina rompe i confini della casa per uscire e colonizzare gli spazi esterni con una duplice funzione: impreziosire l’outdoor e cuocere, grigliare, cucinare. in incline, che sposa alla perfezione i principi del minimalismo e del silenzio visivo, si incontrano molte peculiarità tutte racchiuse in un monoblocco, monomaterico inclinato. una perfetta angolatura permette la fruizione di ciascun lato per formare una composizione che, senza elementi di discontinuità, si propone essa stessa come elemento unico e di rottura, protagonista assoluta. molto più di un’isola cucina, incline si presenta come uno scoglio nel verde di casa. cucina monoblocco da esterno ha un’anima in acciaio inossidabile austenitico, barbecue a gas con coperchio scorrevole in pietra. vasca in pietra con piletta nascosta dove l’acqua fuoriesce da un foro praticato direttamente nella pietra. in testa, due cestoni in acciaio inossidabile autenitico si aprono mediante guide a sfere, anch’esse d’acciaio.",
             "base_unit": null,
             "wall_unit": null,
             "tall_unit": null,
@@ -9031,6 +9031,588 @@
             "title": "DOMIZIANI SUMMER SALE",
             "company": "Domiziani Design",
             "video_url": "https://youtube.com/embed/NhAJ7waCapE",
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.mediacategory",
+        "pk": 1,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:04.641Z",
+            "updated_at": "2023-04-01T17:51:04.641Z",
+            "name": "Featured",
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.mediacategory",
+        "pk": 2,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:28.896Z",
+            "updated_at": "2023-04-01T17:51:28.896Z",
+            "name": "Article",
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 1,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:19.648Z",
+            "updated_at": "2023-04-01T17:51:19.648Z",
+            "category": 1,
+            "image": "taxila/media/e3d01d2e3f6649ce935d27d5df555f77-taxila-next/Assets/images/Media/1._CI_New_dZvm2M1.webp",
+            "title": "Volume 11, Issue 5, Page 16",
+            "url": "https://editions.communityimpact.com/view/704356651/16/",
+            "source": "Community Impact Newspaper",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 2,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:24.144Z",
+            "updated_at": "2023-04-01T17:51:24.144Z",
+            "category": 1,
+            "image": "taxila/media/599bcc704923450c86a0ac43136a636e-taxila-next/Assets/images/Media/2._Paper__kNmJjo3.webp",
+            "title": "Dallas, Page 13 - 14",
+            "url": "http://papercitymagazine.uberflip.com/i/1405904-papercity-dallas-september-2021/13?",
+            "source": "Paper City",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 3,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:24.684Z",
+            "updated_at": "2023-04-01T17:51:24.684Z",
+            "category": 1,
+            "image": "taxila/media/975c189335aa4e61b327009455f6c396-taxila-next/Assets/images/Media/3._CI_New_dSBWibe.webp",
+            "title": "Volume 11, Issue 7, Page 22",
+            "url": "https://editions.communityimpact.com/view/838292375/22/",
+            "source": "Community Impact Newspaper",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 4,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:25.985Z",
+            "updated_at": "2023-04-01T17:51:25.985Z",
+            "category": 1,
+            "image": "taxila/media/53d1879de345407496542b6d8ecc7c62-taxila-next/Assets/images/Media/4._CI_New_7qBpLHD.webp",
+            "title": "Volume 11, Issue 8, Page 10",
+            "url": "https://editions.communityimpact.com/view/533419637/10/",
+            "source": "Community Impact Newspaper",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 5,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:27.286Z",
+            "updated_at": "2023-04-01T17:51:27.286Z",
+            "category": 1,
+            "image": "taxila/media/3ba15cd0a027400ba48ea13508b26905-taxila-next/Assets/images/Media/5._Paper__XScyAQX.webp",
+            "title": "Dallas, Page 15 - 16",
+            "url": "http://papercitymagazine.uberflip.com/i/1420844-papercity-dallas-november-2021/15?",
+            "source": "Paper City",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 6,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:27.811Z",
+            "updated_at": "2023-04-01T17:51:27.811Z",
+            "category": 1,
+            "image": "taxila/media/ad7f20356c6040c78530925a38fd55d8-taxila-next/Assets/images/Media/6._CI_New_dQWff7B.webp",
+            "title": "Volume 11, Issue 9, Page 14",
+            "url": "https://editions.communityimpact.com/view/770494646/14/",
+            "source": "Community Impact Newspaper",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 7,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:29.001Z",
+            "updated_at": "2023-04-01T17:51:29.001Z",
+            "category": 2,
+            "image": "taxila/media/445c484f02104ab4943466e1489b4e40-taxila-next/Assets/images/Media/7._Paper__cgvQwza.webp",
+            "title": "nan",
+            "url": "https://www.papercitymag.com/society/dallas-design-taxila-stone-showroom-surfaces-stone-artists-designers/",
+            "source": "Paper City",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 8,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:29.970Z",
+            "updated_at": "2023-04-01T17:51:29.970Z",
+            "category": 2,
+            "image": "taxila/media/ef3566251a724aac94b3182244f58549-taxila-next/Assets/images/Media/8._Modern_b5EYt40.webp",
+            "title": "Dallas, Page 184",
+            "url": "http://digital.modernluxury.com/publication/?m=3620&amp;i=729885&amp;p=186&amp;ver=html5",
+            "source": "Modern Luxury",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 9,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:31.115Z",
+            "updated_at": "2023-04-01T17:51:31.115Z",
+            "category": 1,
+            "image": "taxila/media/5bfde75b54d94f4fbb73f1dce7717c9c-taxila-next/Assets/images/Media/9._Paper__RDSXxv2.webp",
+            "title": "Dallas, Page 15 - 16",
+            "url": "http://papercitymagazine.uberflip.com/i/1439511-papercity-dallas-january-february-2022/15?",
+            "source": "Paper City",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 10,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:31.643Z",
+            "updated_at": "2023-04-01T17:51:31.643Z",
+            "category": 1,
+            "image": "taxila/media/6cae182bb48c40128da5b05f2f4876c5-taxila-next/Assets/images/Media/10._Moder_M4QkLV4.webp",
+            "title": "Texas, Page 22 - 23",
+            "url": "https://digital.modernluxury.com/publication/?m=22590&amp;i=737416&amp;p=24&amp;ver=html5",
+            "source": "Modern Luxury - Interiors",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 11,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:32.831Z",
+            "updated_at": "2023-04-01T17:51:32.831Z",
+            "category": 1,
+            "image": "taxila/media/8cc253cb95884c1f9fd68303849eeb16-taxila-next/Assets/images/Media/11._Moder_AmXYfK6.webp",
+            "title": "Dallas, Page 55",
+            "url": "https://digital.modernluxury.com/publication/?m=3620&amp;i=738656&amp;p=56&amp;ver=html5",
+            "source": "Modern Luxury",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 12,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:34.047Z",
+            "updated_at": "2023-04-01T17:51:34.047Z",
+            "category": 1,
+            "image": "taxila/media/6510b07dd46846b18d1bca5aac2bc79e-taxila-next/Assets/images/Media/12._Paper_VLaBipz.webp",
+            "title": "Dallas, Page 58",
+            "url": "http://papercitymagazine.uberflip.com/i/1455228-papercity-dallas-march-2022/57?",
+            "source": "Paper City",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 13,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:34.428Z",
+            "updated_at": "2023-04-01T17:51:34.428Z",
+            "category": 2,
+            "image": "taxila/media/d264e9f356ac42729b475d21bec48400-taxila-next/Assets/images/Media/13._Voyag_x0AJD9f.webp",
+            "title": "nan",
+            "url": "http://voyagedallas.com/interview/conversations-with-josh-caballero/",
+            "source": "Voyage Dallas",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 14,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:34.763Z",
+            "updated_at": "2023-04-01T17:51:34.763Z",
+            "category": 1,
+            "image": "taxila/media/ec7332ab16c14e0bbc0944f8d51af071-taxila-next/Assets/images/Media/14._Paper_bMm4c4i.webp",
+            "title": "Dallas, Page 7-8",
+            "url": "http://papercitymagazine.uberflip.com/i/1462583-papercity-dallas-april-2022/7?",
+            "source": "Paper City",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 15,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:35.282Z",
+            "updated_at": "2023-04-01T17:51:35.282Z",
+            "category": 1,
+            "image": "taxila/media/ddc812fbd26840a7b4f14e60d12ecf13-taxila-next/Assets/images/Media/15._Paper_pKbPSet.webp",
+            "title": "Dallas, Page 52",
+            "url": "http://papercitymagazine.uberflip.com/i/1465756-papercity-dallas-may-2022/51?",
+            "source": "Paper City",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 16,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:35.730Z",
+            "updated_at": "2023-04-01T17:51:35.730Z",
+            "category": 1,
+            "image": "taxila/media/8c4fe17fe5ba4feebb618f134eda2c38-taxila-next/Assets/images/Media/16._Moder_AZXmPnG.webp",
+            "title": "Texas, Page 16-17",
+            "url": "https://digital.modernluxury.com/publication/?m=22590&i=746790&p=18&ver=html5",
+            "source": "Modern Luxury - Interiors",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 17,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:36.105Z",
+            "updated_at": "2023-04-01T17:51:36.105Z",
+            "category": 2,
+            "image": "taxila/media/a9b4acc6ecc1456e8ba13a71f5475e9f-taxila-next/Assets/images/Media/17._M2G_V_tPcnoTC.webp",
+            "title": "nan",
+            "url": "https://www.m2gventures.com/press/m2gs-urban-industrial-redevelopment-lands-two-tenants/",
+            "source": "M2G Ventures",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 18,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:36.574Z",
+            "updated_at": "2023-04-01T17:51:36.574Z",
+            "category": 2,
+            "image": "taxila/media/2469fb2c96e94942ae73eec8ee459968-taxila-next/Assets/images/Media/18._Fort__3Bkc0bP.webp",
+            "title": "nan",
+            "url": "https://fortworthinc.com/news/two-companies-moving-into-m2g-ventures-proto-park/",
+            "source": "Fort Worth Inc.",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 19,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:36.993Z",
+            "updated_at": "2023-04-01T17:51:36.993Z",
+            "category": 1,
+            "image": "taxila/media/2c4ad862ce6c45edbced1e0a6843df03-taxila-next/Assets/images/Media/19._Paper_wEVkS0Q.webp",
+            "title": "Dallas, Page 48",
+            "url": "http://papercitymagazine.uberflip.com/i/1468547-papercity-dallas-june-2022/47?",
+            "source": "Paper City",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 20,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:37.394Z",
+            "updated_at": "2023-04-01T17:51:37.394Z",
+            "category": 1,
+            "image": "taxila/media/860740e94c6f43239c88686dc5dc1449-taxila-next/Assets/images/Media/20._Moder_8nKHEeG.webp",
+            "title": "Dallas, Page 23",
+            "url": "https://digital.modernluxury.com/publication/?m=3620&i=751131&p=24&ver=html5",
+            "source": "Modern Luxury",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 21,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:37.744Z",
+            "updated_at": "2023-04-01T17:51:37.744Z",
+            "category": 1,
+            "image": "taxila/media/f4f712064ab04b6a8f3d77a036cd9f23-taxila-next/Assets/images/Media/21._Moder_L2aqVqd.webp",
+            "title": "Dallas, Page 6-7",
+            "url": "https://digital.modernluxury.com/publication/?m=60522&i=750374&p=8&ver=html5",
+            "source": "Modern Luxury - Guide to the Design District",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 22,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:38.299Z",
+            "updated_at": "2023-04-01T17:51:38.299Z",
+            "category": 1,
+            "image": "taxila/media/9658ec6ad08d430cbdb54c90450f99c2-taxila-next/Assets/images/Media/22._Paper_ZAP3ZyT.webp",
+            "title": "Dallas, Page 9-10",
+            "url": "http://papercitymagazine.uberflip.com/i/1471747-papercity-dallas-july-august-2022/9?",
+            "source": "Paper City",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 23,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:38.655Z",
+            "updated_at": "2023-04-01T17:51:38.655Z",
+            "category": 1,
+            "image": "taxila/media/5f1fd35a1f3a47c1899a45fc1fb05dcf-taxila-next/Assets/images/Media/23._Moder_FDgvWRv.webp",
+            "title": "Texas, Page 18-19",
+            "url": "https://digital.modernluxury.com/publication/?m=22590&i=753788&p=20&pp=2&ver=html5",
+            "source": "Modern Luxury - Interiors",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 24,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:39.026Z",
+            "updated_at": "2023-04-01T17:51:39.026Z",
+            "category": 2,
+            "image": "taxila/media/a6a5362397e34ff8bad639dc0a085593-taxila-next/Assets/images/Media/24._M2G_V_OYXfg7v.webp",
+            "title": "nan",
+            "url": "https://www.m2gventures.com/blog/tenant-spotlight-taxila-stone/",
+            "source": "M2G Ventures",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 25,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:39.400Z",
+            "updated_at": "2023-04-01T17:51:39.400Z",
+            "category": 1,
+            "image": "taxila/media/5a09fdf0040e4852882d4bde198af57a-taxila-next/Assets/images/Media/25._Moder_wa2feU9.webp",
+            "title": "Dallas, Page 59",
+            "url": "https://digital.modernluxury.com/publication/?m=3620&i=757880&p=60&ver=html5",
+            "source": "Modern Luxury",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 26,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:39.809Z",
+            "updated_at": "2023-04-01T17:51:39.809Z",
+            "category": 1,
+            "image": "taxila/media/5ec4e06ad952414b9d758f9b0ef270e8-taxila-next/Assets/images/Media/26._Paper_VlDP2Cx.webp",
+            "title": "Dallas, Page 27-28",
+            "url": "http://papercitymagazine.uberflip.com/i/1477684-papercity-dallas-september-2022/27?",
+            "source": "Paper City",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 27,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:40.197Z",
+            "updated_at": "2023-04-01T17:51:40.197Z",
+            "category": 2,
+            "image": "taxila/media/b75a1b7e92b946e098faaa672bd92d12-taxila-next/Assets/images/Media/27._Newsw_oyE22By.webp",
+            "title": "nan",
+            "url": "https://www.einnews.com/pr_news/593238362/international-italian-luxury-brand-minotticucine-and-maistri-are-coming-to-dallas-opening-their-kitchen-design-showroom",
+            "source": "Newswires",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 28,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:40.540Z",
+            "updated_at": "2023-04-01T17:51:40.540Z",
+            "category": 1,
+            "image": "taxila/media/268d15f517094cf7926ffe9dbee1947d-taxila-next/Assets/images/Media/28._Moder_6YHFqOl.webp",
+            "title": "Dallas, Page 10-11",
+            "url": "https://digital.modernluxury.com/publication/?m=22590&i=764168&p=12&pp=2&ver=html5",
+            "source": "Modern Luxury - Interiors",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 29,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:40.983Z",
+            "updated_at": "2023-04-01T17:51:40.983Z",
+            "category": 2,
+            "image": "taxila/media/155833154d7e4149b9a6808bf705bdac-taxila-next/Assets/images/Media/29._Home__gdRYxiM.webp",
+            "title": "nan",
+            "url": "http://hfbusiness.com/hfbnow/articleid/22873/minotticucine-and-taxila-stone-to-bring-stand-alone-showroom-to-dallas",
+            "source": "Home Furnishings Business",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 30,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:41.362Z",
+            "updated_at": "2023-04-01T17:51:41.362Z",
+            "category": 1,
+            "image": "taxila/media/8e3cec22f6a14aeebfda997cc2c0f32e-taxila-next/Assets/images/Media/30._Paper_DpikPVD.webp",
+            "title": "Dallas, Page 44",
+            "url": "http://papercitymagazine.uberflip.com/i/1480367-papercity-dallas-october-2022/43?",
+            "source": "Paper City",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 31,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:41.757Z",
+            "updated_at": "2023-04-01T17:51:41.757Z",
+            "category": 2,
+            "image": "taxila/media/5ac9b7e9264046e8841eb6ac6d6bb4e7-taxila-next/Assets/images/Media/31._Furni_Q47QlJ0.webp",
+            "title": "nan",
+            "url": "https://www.furniturelightingdecor.com/international-italian-luxury-brand-minotticucine-coming-dallas",
+            "source": "Furniture, Lighting &amp; Decor",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 32,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:42.107Z",
+            "updated_at": "2023-04-01T17:51:42.107Z",
+            "category": 2,
+            "image": "taxila/media/288bf13cfbdd4f4c92ad21e07232143b-taxila-next/Assets/images/Media/32._Busin_1JBVU2q.webp",
+            "title": "nan",
+            "url": "https://businessofhome.com/articles/schumacher-s-new-space-in-nashville-jeremiah-brent-opens-an-la-flagship-and-more",
+            "source": "Business of Home",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 33,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:42.567Z",
+            "updated_at": "2023-04-01T17:51:42.567Z",
+            "category": 1,
+            "image": "taxila/media/9649bc3d770943bb94dc374e22efd8a4-taxila-next/Assets/images/Media/33._Moder_frzlX3c.webp",
+            "title": "Dallas, Page 69",
+            "url": "https://digital.modernluxury.com/publication/?m=3620&i=765202&p=70&ver=html5",
+            "source": "Modern Luxury",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 34,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:42.997Z",
+            "updated_at": "2023-04-01T17:51:42.997Z",
+            "category": 2,
+            "image": "taxila/media/33d5940c53ec48cf97d2c95d92dc2796-taxila-next/Assets/images/Media/34._Paper_RClSeyo.webp",
+            "title": "",
+            "url": "https://www.papercitymag.com/home-design/texas-design-week-dallas-showcases-bespoke-interiors-minotticucine/",
+            "source": "Paper City",
+            "publish_date": null,
+            "is_active": true
+        }
+    },
+    {
+        "model": "taxila.media",
+        "pk": 35,
+        "fields": {
+            "ranking": 0,
+            "created_at": "2023-04-01T17:51:43.863Z",
+            "updated_at": "2023-04-01T17:51:43.863Z",
+            "category": 2,
+            "image": "taxila/media/7cec6c25cce1447e8bba726da04882f8-taxila-next/Assets/images/Media/35._Paper_jlATzKY.webp",
+            "title": "",
+            "url": "https://www.papercitymag.com/home-design/minotticucine-dallas-design-district-luxury-italian-kitchen-maistri/",
+            "source": "Paper City",
+            "publish_date": null,
             "is_active": true
         }
     }

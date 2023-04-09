@@ -154,17 +154,6 @@ class InspirationView(ListAPIView):
 
         return queryset
 
-    def get(self, request, *args, **kwargs):
-        data = super().get(request, *args, **kwargs)
-
-        try:
-            meta_data_obj = MetaData.objects.get(slug="inspiration")
-            data["meta_data"] = MetaDataSerializer(meta_data_obj).data
-        except MetaData.DoesNotExist:
-            data["meta_data"] = None
-
-        return Response(data)
-
     @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)

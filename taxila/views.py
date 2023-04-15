@@ -13,6 +13,7 @@ from taxila.serializers import (
     MetaDataSerializer,
     VideoSerializer,
     MediaSerializer,
+    TeamSerializer,
 )
 from taxila.models import (
     HomepageBanner,
@@ -28,6 +29,7 @@ from taxila.models import (
     ParentCategory,
     Video,
     VideoCategory,
+    Team,
 )
 from django.conf import settings
 
@@ -282,6 +284,15 @@ class MediaView(ListAPIView):
             queryset = queryset.filter(category_id=category)
 
         return queryset
+
+    @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
+
+
+class TeamsListView(ListAPIView):
+    serializer_class = TeamSerializer
+    queryset = Team.objects.filter(is_active=True)
 
     @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
     def dispatch(self, request, *args, **kwargs):

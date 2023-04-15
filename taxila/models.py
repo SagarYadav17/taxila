@@ -254,3 +254,17 @@ class Media(TimestampedModel):
 
     def __str__(self) -> str:
         return "%s - %s - %s" % (self.title, self.category.name, self.publish_date)
+
+
+class Team(TimestampedModel):
+    name = models.CharField(max_length=255)
+    image = models.ImageField(upload_to=upload_to_path)
+    designation = models.CharField(max_length=255, blank=True, null=True)
+    linkedin = models.URLField(blank=True, null=True)
+    mail = models.EmailField(blank=True, null=True)
+    phone_number = models.CharField(max_length=255, blank=True, null=True)
+    profile = models.TextField(blank=True, null=True)
+    is_active = models.BooleanField(default=True)
+
+    def __str__(self) -> str:
+        return "%s - %s" % (self.name, self.designation)

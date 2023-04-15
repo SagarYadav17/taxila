@@ -10,6 +10,7 @@ from taxila.models import (
     Media,
     MetaData,
     ParentCategory,
+    Team,
     Video,
 )
 
@@ -130,4 +131,10 @@ class MediaSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Media
+        fields = "__all__"
+
+
+class TeamSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Team
         fields = "__all__"

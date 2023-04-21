@@ -28,7 +28,7 @@ admin.site.index_title = "Taxila Stone"
 admin.site.site_title = "Administration"
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
+    path("", admin.site.urls),
     path("", include("django_prometheus.urls")),
     path("banner-images/", BannerImagesView.as_view(), name="banners-images"),
     path("kitchen-category/", KitchenCategoryView.as_view(), name="kitchen-category"),

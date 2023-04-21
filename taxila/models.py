@@ -258,7 +258,7 @@ class Media(TimestampedModel):
 
 class Team(TimestampedModel):
     name = models.CharField(max_length=255)
-    image = models.ImageField(upload_to=upload_to_path)
+    image = models.ImageField(upload_to=upload_to_path, blank=True, null=True)
     designation = models.CharField(max_length=255, blank=True, null=True)
     linkedin = models.URLField(blank=True, null=True)
     mail = models.EmailField(blank=True, null=True)

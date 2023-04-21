@@ -131,10 +131,12 @@ class MediaSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Media
-        fields = "__all__"
+        fields = ("id", "category", "image", "title", "url", "source", "publish_date", "category_name")
+        read_only_fields = fields
 
 
 class TeamSerializer(serializers.ModelSerializer):
     class Meta:
         model = Team
-        fields = "__all__"
+        fields = ("id", "name", "designation", "linkedin", "mail", "phone_number", "profile")
+        read_only_fields = fields

@@ -11,6 +11,7 @@ from taxila.serializers import (
     ParentMaterialDetailSerializer,
     MaterialDetailSerializer,
     MetaDataSerializer,
+    StaticContentSerializer,
     VideoSerializer,
     MediaSerializer,
     TeamSerializer,
@@ -27,6 +28,7 @@ from taxila.models import (
     MediaCategory,
     MetaData,
     ParentCategory,
+    StaticContent,
     Video,
     VideoCategory,
     Team,
@@ -293,6 +295,23 @@ class MediaView(ListAPIView):
 class TeamsListView(ListAPIView):
     serializer_class = TeamSerializer
     queryset = Team.objects.filter(is_active=True)
+
+    @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
+
+
+class StaticContentListView(ListAPIView):
+    serializer_class = StaticContentSerializer
+
+    def get_queryset(self):
+        queryset = StaticContent.objects.filter(is_active=True)
+        title = self.request.query_params.get("title")
+
+        if title:
+            queryset = queryset.filter(title=title)
+
+        return queryset
 
     @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
     def dispatch(self, request, *args, **kwargs):

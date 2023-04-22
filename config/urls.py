@@ -16,6 +16,7 @@ from taxila.views import (
     MaterialDetailView,
     MetaDataView,
     ProductSlugVerifyView,
+    StaticContentListView,
     TeamsListView,
     VideoCategoryView,
     VideoView,
@@ -44,10 +45,13 @@ urlpatterns = [
     path("meta-data/<slug:slug>/", MetaDataView.as_view(), name="meta-data"),
     path("parent-material/<int:id>/", ParentMaterialDetailView.as_view(), name="parent-material"),
     path("material/<str:query>/", MaterialDetailView.as_view(), name="material-detail"),
-    path("material-category-detail/<str:query>/", MaterialCategoryDetailView.as_view(), name="material-category-detail"),
+    path(
+        "material-category-detail/<str:query>/", MaterialCategoryDetailView.as_view(), name="material-category-detail"
+    ),
     path("material/", MaterialView.as_view(), name="material"),
     path("slug-verify/<slug:slug>/", ProductSlugVerifyView.as_view(), name="slug-verify"),
     path("teams/", TeamsListView.as_view(), name="teams"),
+    path("static-content/", StaticContentListView.as_view(), name="static-content"),
 ]
 
 

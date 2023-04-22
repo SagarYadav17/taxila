@@ -268,3 +268,12 @@ class Team(TimestampedModel):
 
     def __str__(self) -> str:
         return "%s - %s" % (self.name, self.designation)
+
+
+class StaticContent(TimestampedModel):
+    title = models.CharField(max_length=255, unique=True)
+    file = models.FileField(upload_to=upload_to_path)
+    is_active = models.BooleanField(default=True)
+
+    def __str__(self) -> str:
+        return self.title

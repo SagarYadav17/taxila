@@ -17,6 +17,8 @@ from taxila.models import (
     InspirationCategory,
     Video,
     VideoCategory,
+    Team,
+    StaticContent,
 )
 
 
@@ -123,3 +125,17 @@ class MediaAdmin(admin.ModelAdmin):
     list_display = ("id", "ranking", "title", "category", "is_active")
     search_fields = ("title",)
     list_filter = ("is_active", "category")
+
+
+@admin.register(Team)
+class TeamAdmin(admin.ModelAdmin):
+    list_display = ("id", "ranking", "name", "designation", "is_active")
+    search_fields = ("title",)
+    list_filter = ("is_active",)
+
+
+@admin.register(StaticContent)
+class StaticContentAdmin(admin.ModelAdmin):
+    list_display = ("id", "ranking", "title", "is_active")
+    search_fields = ("title",)
+    list_filter = ("is_active",)

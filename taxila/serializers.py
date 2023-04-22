@@ -10,6 +10,7 @@ from taxila.models import (
     Media,
     MetaData,
     ParentCategory,
+    StaticContent,
     Team,
     Video,
 )
@@ -139,4 +140,11 @@ class TeamSerializer(serializers.ModelSerializer):
     class Meta:
         model = Team
         fields = ("id", "name", "designation", "linkedin", "mail", "phone_number", "profile")
+        read_only_fields = fields
+
+
+class StaticContentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = StaticContent
+        fields = ("id", "title", "file")
         read_only_fields = fields

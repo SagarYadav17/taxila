@@ -246,7 +246,8 @@ class MediaCategory(TimestampedModel):
 class Media(TimestampedModel):
     category = models.ForeignKey(MediaCategory, on_delete=models.CASCADE)
     image = models.FileField(upload_to=upload_to_path)
-    title = models.CharField(max_length=255, blank=True, null=True)
+    title = models.TextField(blank=True, null=True)
+    content = models.TextField(blank=True, null=True)
     url = models.URLField(max_length=255)
     source = models.CharField(max_length=255, blank=True, null=True)
     publish_date = models.DateField(blank=True, null=True)

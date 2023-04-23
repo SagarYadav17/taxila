@@ -182,7 +182,7 @@ class VideoView(ListAPIView):
 
 class MetaDataView(RetrieveAPIView):
     serializer_class = MetaDataSerializer
-    queryset = MetaData.objects
+    queryset = MetaData.objects.all()
     lookup_field = "slug"
 
     @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))

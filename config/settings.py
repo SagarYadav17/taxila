@@ -161,6 +161,7 @@ CACHE_DEFAULT_TIMEOUT = 900  # 15 Minutes (in seconds)
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:8000",
     "https://*.onrender.com/",
+    "http://54.183.227.232/",
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True

@@ -72,6 +72,7 @@ class MaterialDetailSerializer(serializers.ModelSerializer):
     images = serializers.SerializerMethodField()
     catergory_name = serializers.ReadOnlyField(source="category.name")
     parent_category_name = serializers.ReadOnlyField(source="category.parent_category.name")
+    category_banner_image = serializers.ImageField(source="category.banner_image", read_only=True)
     meta_data = serializers.SerializerMethodField()
 
     class Meta:

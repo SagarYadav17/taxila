@@ -130,7 +130,7 @@ class Material(TimestampedModel):
     technical_specification_open_porosity = models.TextField(blank=True, null=True)
     technical_specification_abrasion_strength = models.TextField(blank=True, null=True)
     technical_specification_compressive_strength = models.TextField(blank=True, null=True)
-    technical_specification_attachement = models.FileField(upload_to=upload_to_path)
+    technical_specification_attachement = models.FileField(upload_to=upload_to_path, blank=True, null=True)
 
     def __str__(self) -> str:
         return self.name

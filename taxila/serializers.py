@@ -108,6 +108,13 @@ class MetaDataSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
+class InspirationDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = InspirationDetail
+        fields = ("id", "title", "image")
+        read_only_fields = ("id", "title", "image")
+
+
 class InspirationSerializer(serializers.ModelSerializer):
     category_name = serializers.ReadOnlyField(source="category.name")
     detail = serializers.SerializerMethodField()
@@ -117,7 +124,7 @@ class InspirationSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
     def get_detail(self, obj):
-        return InspirationDetail.objects.filter(inspiration_id=obj.id).values("id", "title", "image")
+        return InspirationDetailSerializer(InspirationDetail.objects.filter(inspiration_id=obj.id), many=True).data
 
 
 class VideoSerializer(serializers.ModelSerializer):

@@ -108,6 +108,7 @@ class Material(TimestampedModel):
     category = models.ForeignKey(MaterialCategory, on_delete=models.CASCADE, blank=True, null=True)
     origin_country = models.CharField(max_length=255, blank=True, null=True)
     level = models.PositiveBigIntegerField(default=0)
+    description = models.TextField(blank=True, null=True)
     care_instruction = models.TextField(blank=True, null=True)
     meta_description = models.TextField(blank=True, null=True)
     color = models.TextField(blank=True, null=True)

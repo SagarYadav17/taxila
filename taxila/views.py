@@ -36,6 +36,11 @@ from taxila.models import (
 from django.conf import settings
 
 
+class HomeView(APIView):
+    def get(self, request):
+        return Response({"status": True})
+
+
 class HomepageAPIView(APIView):
     # Cache page for the requested url
     @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))

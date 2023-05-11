@@ -4,6 +4,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from taxila.views import (
     BannerImagesView,
+    HomeView,
     HomepageAPIView,
     InspirationView,
     KitchenCategoryView,
@@ -31,6 +32,7 @@ admin.site.site_title = "Administration"
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("django_prometheus.urls")),
+    path("", HomeView.as_view(), name="home"),
     path("banner-images/", BannerImagesView.as_view(), name="banners-images"),
     path("kitchen-category/", KitchenCategoryView.as_view(), name="kitchen-category"),
     path("inspiration-category/", InspirationCategoryView.as_view(), name="inspiration-category"),

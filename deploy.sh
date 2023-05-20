@@ -12,11 +12,5 @@ else
     real_user=$(whoami)
 fi
 
-# Delete Old Data
-sudo docker stop $(docker ps -aq)
-sudo docker rm $(docker ps -aq)
-sudo docker rmi $(docker images -aq)
-
-# Build and Start Docker Container
-docker build --pull --rm -f "Dockerfile" -t taxila "."
-sudo docker run -p 80:8000 -d --restart unless-stopped --name taxila-django taxila
+sudo docker compose -f "compose.yaml" down
+sudo docker compose -f "compose.yaml" up -d --build

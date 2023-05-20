@@ -1,0 +1,13 @@
+FROM python:3.11-alpine
+
+WORKDIR /app
+
+COPY requirements.txt .
+
+RUN pip install schedule requests
+
+COPY . .
+
+COPY cron_script.py .
+
+CMD python cron_script.py

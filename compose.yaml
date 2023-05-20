@@ -18,3 +18,10 @@ services:
     ports:
       - 6379:6379
     restart: always
+
+  cron:
+    build:
+      dockerfile: Dockerfile_cron
+    restart: always
+    depends_on:
+      - django

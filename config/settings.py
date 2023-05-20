@@ -90,6 +90,13 @@ DATABASES = {
     }
 }
 
+CACHES = {
+    "default": {
+        "BACKEND": "django_prometheus.cache.backends.redis.RedisCache",
+        "LOCATION": "redis://redis:6379/0",
+    }
+}
+
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
@@ -159,9 +166,10 @@ REST_FRAMEWORK = {
 CACHE_DEFAULT_TIMEOUT = 900  # 15 Minutes (in seconds)
 
 CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:8000",
-    "https://*.onrender.com/",
-    "http://54.183.227.232/",
+    "http://localhost:*",
+    "https://*.onrender.com",
+    "http://52.8.83.104",
+    "https://*.taxilastone.com",
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True

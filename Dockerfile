@@ -1,18 +1,13 @@
 FROM python:3.11-alpine
 
+WORKDIR /app
 
-ENV APP_HOME /code
-ENV PYTHONPATH $APP_HOME
-ENV PYTHONUNBUFFERED 1
-ENV ENV_CONFIG 1
-WORKDIR $APP_HOME
-
-COPY ./requirements.txt $APP_HOME/requirements.txt
+COPY requirements.txt .
 
 RUN pip install --upgrade pip && pip install -r requirements.txt --no-cache-dir
 
-COPY . $APP_HOME
+COPY . .
 
 EXPOSE 8000
 
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD python manage.py runserver 0.0.0.0:8000

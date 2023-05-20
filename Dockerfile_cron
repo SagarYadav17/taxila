@@ -6,8 +6,8 @@ COPY requirements.txt .
 
 RUN pip install schedule requests
 
-COPY . .
+COPY cron_script.py .
 
 COPY cron_script.py .
 
-CMD python cron_script.py
+CMD ["python", "cron_script.py"]

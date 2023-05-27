@@ -10,6 +10,8 @@ from config._env import (
     DB_NAME,
     DB_PORT,
     DB_USERNAME,
+    REDIS_HOST,
+    REDIS_PORT,
 )
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -93,7 +95,7 @@ DATABASES = {
 CACHES = {
     "default": {
         "BACKEND": "django_prometheus.cache.backends.redis.RedisCache",
-        "LOCATION": "redis://redis:6379/",
+        "LOCATION": f"redis://{REDIS_HOST}:{REDIS_PORT}/",
     }
 }
 

@@ -1,5 +1,7 @@
 from uuid import uuid4
+from contextlib import suppress
 import meilisearch
+from meilisearch.errors import MeilisearchApiError
 from config._env import MEILISEARCH_URL
 
 
@@ -11,7 +13,8 @@ def get_uuid_filename(filename: str) -> str:
 
 def index_meilisearch_data(json_data: dict, index_name: str):
     client = meilisearch.Client(MEILISEARCH_URL)
-    client.index(index_name).update_documents(json_data)
+    with suppress(MeilisearchApiError):
+        client.index(index_name).update_documents(json_data)
 
 
 def search_meilisearch(index_name: str, query: str):

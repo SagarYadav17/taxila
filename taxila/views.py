@@ -4,6 +4,7 @@ from rest_framework.exceptions import NotFound
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework.views import APIView
 from rest_framework.response import Response
+
 from taxila.serializers import (
     InspirationSerializer,
     KitchenItemSerializer,
@@ -34,6 +35,7 @@ from taxila.models import (
     Team,
 )
 from django.conf import settings
+from config.utils import search_meilisearch
 
 
 class HomeView(APIView):
@@ -321,3 +323,9 @@ class StaticContentListView(ListAPIView):
     @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
+
+
+class MaterialSearchView(ListAPIView):
+    def get(self, request, query):
+        data = search_meilisearch("material", query)["hits"]
+        return Response(data)

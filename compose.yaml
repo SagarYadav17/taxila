@@ -19,9 +19,9 @@ services:
       - 6379:6379
     restart: always
 
-  cron:
-    build:
-      dockerfile: Dockerfile_cron
-    restart: always
-    depends_on:
-      - django
+  meilisearch:
+    image: getmeili/meilisearch:latest
+    ports:
+      - 7700:7700
+    environment:
+      - MEILI_NO_ANALYTICS=true

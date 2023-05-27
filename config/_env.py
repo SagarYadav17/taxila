@@ -21,3 +21,5 @@ AWS_S3_BUCKET_NAME = os.environ.get("AWS_STORAGE_BUCKET_NAME", "")
 # Redis
 REDIS_HOST = os.environ.get("REDIS_HOST", "127.0.0.1")
 REDIS_PORT = os.environ.get("REDIS_PORT", 6379)
+
+MEILISEARCH_URL = os.environ.get("MEILISEARCH_URL", "http://localhost:7700")

@@ -23,6 +23,7 @@ from taxila.views import (
     VideoView,
     InspirationCategoryView,
     MaterialView,
+    MaterialSearchView,
 )
 
 admin.site.site_header = "Taxila Stone Administration"
@@ -54,6 +55,7 @@ urlpatterns = [
     path("slug-verify/<slug:slug>/", ProductSlugVerifyView.as_view(), name="slug-verify"),
     path("teams/", TeamsListView.as_view(), name="teams"),
     path("static-content/", StaticContentListView.as_view(), name="static-content"),
+    path("material-search/<str:query>/", MaterialSearchView.as_view(), name="material-search"),
 ]
 
 

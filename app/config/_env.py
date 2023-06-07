@@ -7,11 +7,11 @@ DEBUG_MODE = os.environ.get("DEBUG_MODE", False)
 DJANGO_SECRET_KEY = os.environ.get("SECRET_KEY", "secret-key")
 
 # Postgres
-DB_NAME = os.environ.get("DB_NAME", "taxila")
-DB_USERNAME = os.environ.get("DB_USERNAME", "root")
-DB_PASSWORD = os.environ.get("DB_PASSWORD", "password")
-DB_HOSTNAME = os.environ.get("DB_HOSTNAME", "127.0.0.1")
-DB_PORT = os.environ.get("DB_PORT", "3306")
+DB_NAME = os.environ.get("DB_NAME", "postgres")
+DB_USERNAME = os.environ.get("DB_USERNAME", "postgres")
+DB_PASSWORD = os.environ.get("DB_PASSWORD", "postgres")
+DB_HOSTNAME = os.environ.get("DB_HOSTNAME", "postgres")
+DB_PORT = os.environ.get("DB_PORT", "5432")
 
 # AWS
 AWS_IAM_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID", "")

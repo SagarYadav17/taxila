@@ -1,10 +1,10 @@
 from django.contrib import admin
+from django.http import JsonResponse
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from taxila.views import (
     BannerImagesView,
-    HomeView,
     HomepageAPIView,
     InspirationView,
     KitchenCategoryView,
@@ -23,7 +23,6 @@ from taxila.views import (
     VideoView,
     InspirationCategoryView,
     MaterialView,
-    MaterialSearchView,
 )
 
 admin.site.site_header = "Taxila Stone Administration"
@@ -32,7 +31,7 @@ admin.site.site_title = "Administration"
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", HomeView.as_view(), name="home"),
+    path("", lambda request: JsonResponse({"message": "Hello There"})),
     path("banner-images/", BannerImagesView.as_view(), name="banners-images"),
     path("kitchen-category/", KitchenCategoryView.as_view(), name="kitchen-category"),
     path("inspiration-category/", InspirationCategoryView.as_view(), name="inspiration-category"),
@@ -54,7 +53,6 @@ urlpatterns = [
     path("slug-verify/<slug:slug>/", ProductSlugVerifyView.as_view(), name="slug-verify"),
     path("teams/", TeamsListView.as_view(), name="teams"),
     path("static-content/", StaticContentListView.as_view(), name="static-content"),
-    path("material-search/<str:query>/", MaterialSearchView.as_view(), name="material-search"),
 ]
 
 

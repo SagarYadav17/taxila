@@ -1,5 +1,5 @@
 api:
-  insecure: true # Enable insecure API (not recommended for production)
+  insecure: false # Enable insecure API (not recommended for production)
 
 providers:
   docker:

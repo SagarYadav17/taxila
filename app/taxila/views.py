@@ -35,13 +35,6 @@ from taxila.models import (
     Team,
 )
 from django.conf import settings
-from config.utils import search_meilisearch
-from meilisearch.errors import MeilisearchApiError
-
-
-class HomeView(APIView):
-    def get(self, request):
-        return Response({"status": True})
 
 
 class HomepageAPIView(APIView):
@@ -324,13 +317,3 @@ class StaticContentListView(ListAPIView):
     @method_decorator(cache_page(settings.CACHE_DEFAULT_TIMEOUT))
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
-
-
-class MaterialSearchView(ListAPIView):
-    def get(self, request, query):
-        try:
-            data = search_meilisearch("material", query)["hits"]
-        except MeilisearchApiError:
-            data = []
-
-        return Response(data)

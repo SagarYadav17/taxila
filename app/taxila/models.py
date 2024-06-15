@@ -2,7 +2,6 @@ from django.db import models
 from django.core.cache import cache
 
 from config.utils import get_uuid_filename
-from taxila.tasks import IndexMaterialThread
 
 
 def upload_to_path(instance, filename):
@@ -136,10 +135,6 @@ class Material(TimestampedModel):
 
     def __str__(self) -> str:
         return self.name
-
-    def save(self, *args, **kwargs) -> None:
-        IndexMaterialThread().start()
-        return super().save(*args, **kwargs)
 
 
 class MaterialImage(TimestampedModel):

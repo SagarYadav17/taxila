@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-DEBUG_MODE = os.environ.get("DEBUG_MODE", False)
+DEBUG_MODE = os.environ.get("DEBUG_MODE", True)
 DJANGO_SECRET_KEY = os.environ.get("SECRET_KEY", "secret-key")
 
 # Postgres
@@ -21,5 +21,3 @@ AWS_S3_BUCKET_NAME = os.environ.get("AWS_STORAGE_BUCKET_NAME", "")
 # Redis
 REDIS_HOST = os.environ.get("REDIS_HOST", "127.0.0.1")
 REDIS_PORT = os.environ.get("REDIS_PORT", 6379)
-
-MEILISEARCH_URL = os.environ.get("MEILISEARCH_URL", "127.0.0.1:7700")

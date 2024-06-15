@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   web:
     build:
@@ -7,8 +5,7 @@ services:
     restart: always
     depends_on:
       - redis
-      - meilisearch
-      - postgres
+      - pgbouncer
     labels:
       - "traefik.enable=true" # Enable Traefik for this service
       - "traefik.http.routers.django.rule=Host(`cms.taxilastone.com`)"
@@ -16,27 +13,25 @@ services:
       - "traefik.http.routers.django.tls=true"
       - "traefik.http.routers.django.tls.certresolver=myresolver"
       - "traefik.http.services.django.loadbalancer.server.port=8000"
-
     environment:
       - REDIS_HOST=redis
-      - REDIS_PORT=6379
-      - MEILISEARCH_URL=http://meilisearch:7700
+      - DB_HOSTNAME=pgbouncer
+      - DB_PORT=6432
 
   redis:
     image: redis:alpine
     restart: always
     volumes:
       - ./data/redisdata:/data
-    ports:
-      - 6379:6379
 
-  meilisearch:
-    image: getmeili/meilisearch:latest
+  pgbouncer:
+    image: bitnami/pgbouncer:latest
     restart: always
-    volumes:
-      - ./data/meili_data:/data.ms
-    ports:
-      - 7700:7700
+    environment:
+      - POSTGRESQL_PASSWORD=postgres
+      - POSTGRESQL_DATABASE=postgres
+      - POSTGRESQL_HOST=postgres
+      - POSTGRESQL_USERNAME=postgres
 
   postgres:
     image: postgres:alpine

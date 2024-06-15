@@ -1,7 +1,7 @@
 ## Project Setup
 
 ```bash
-conda create --prefix ./env python=3.10
-conda activate ./env
+conda env create
+conda activate taxila
 pip install -r requirements.txt
 ```

@@ -21,7 +21,7 @@ pipeline {
       steps {
         echo 'Testing the code....'
         // pip install -r requirements.txt
-        sh 'pip install -r requirements.txt'
+        sh 'pip install --user -r requirements.txt'
         // run tests
         sh 'cd app && python manage.py test'
       }

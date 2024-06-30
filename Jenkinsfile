@@ -8,6 +8,12 @@ pipeline {
 
   stages {
     stage('Test Code') {
+      agent {
+        docker {
+          image 'python:3.12'
+          args '-v /root/.cache/pip:/root/.cache/pip'
+        }
+      }
       steps {
         echo 'Testing the code....'
         // pip install -r requirements.txt

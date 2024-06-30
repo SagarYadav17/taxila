@@ -7,11 +7,21 @@ pipeline {
   }
 
   stages {
+    stage('Test Code') {
+      steps {
+        echo 'Testing the code....'
+        // pip install -r requirements.txt
+        sh 'pip install -r requirements.txt'
+        // run tests
+        sh 'cd app && python manage.py test'
+      }
+    }
+
     // Building Docker images
     stage('Building image') {
       steps {
         script {
-          dockerImage = docker.build("${IMAGE_REPO_NAME}:${IMAGE_TAG}", '-f ./Dockerfile_test .')
+          dockerImage = docker.build("${IMAGE_REPO_NAME}:${IMAGE_TAG}", '-f ./Dockerfile .')
         }
       }
     }

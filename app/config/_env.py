@@ -5,6 +5,7 @@ load_dotenv()
 
 DEBUG_MODE = os.environ.get("DEBUG_MODE", True)
 DJANGO_SECRET_KEY = os.environ.get("SECRET_KEY", "secret-key")
+STACK_STATUS = os.environ.get("STACK_STATUS", "development")
 
 # Postgres
 DB_NAME = os.environ.get("DB_NAME", "postgres")

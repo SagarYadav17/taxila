@@ -7,14 +7,6 @@ pipeline {
   }
 
   stages {
-    stage('Unit Tests') {
-      steps {
-        script {
-          sh 'pip freeze'
-        }
-      }
-    }
-
     // Building Docker images
     stage('Building image') {
       steps {

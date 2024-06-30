@@ -1,6 +1,5 @@
 /* Requires the Docker Pipeline plugin */
 pipeline {
-    agent { docker }
     environment {
         IMAGE_REPO_NAME = 'taxila'
         IMAGE_TAG = "${env.GIT_COMMIT}"

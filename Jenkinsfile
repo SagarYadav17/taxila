@@ -10,12 +10,12 @@ pipeline {
     stage('Test Code') {
       agent {
         docker {
-            image 'python:3.12'
-            // Run the container on the node specified at the
-            // top-level of the Pipeline, in the same workspace,
-            // rather than on a new node entirely:
-            reuseNode true
-            args '-v /root/.cache/pip:/root/.cache/pip'
+          image 'python:3.12'
+          // Run the container on the node specified at the
+          // top-level of the Pipeline, in the same workspace,
+          // rather than on a new node entirely:
+          reuseNode true
+          args '-v /root/.cache/pip:/root/.cache/pip'
         }
       }
       steps {
@@ -27,14 +27,14 @@ pipeline {
       }
     }
 
-    // Building Docker images
-    stage('Building image') {
-      steps {
-        script {
-          dockerImage = docker.build("${IMAGE_REPO_NAME}:${IMAGE_TAG}", '-f ./Dockerfile .')
-        }
-      }
-    }
+    // // Building Docker images
+    // stage('Building image') {
+    //   steps {
+    //     script {
+    //       dockerImage = docker.build("${IMAGE_REPO_NAME}:${IMAGE_TAG}", '-f ./Dockerfile .')
+    //     }
+    //   }
+    // }
   }
 
   post {

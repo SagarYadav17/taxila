@@ -26,6 +26,12 @@ pipeline {
     // Building Docker images
     stage('Building image') {
       steps {
+        agent {
+          docker {
+            image 'docker:bind'
+            args '-v /root/.cache/docker:/root/.cache/docker'
+          }
+        }
         script {
           dockerImage = docker.build("${IMAGE_REPO_NAME}:${IMAGE_TAG}", '-f ./Dockerfile .')
         }
